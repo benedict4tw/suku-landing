@@ -13,11 +13,13 @@ export function AccessPage() {
   const [email, setEmail] = useState("");
   const [reason, setReason] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (status === "sending") return;
     setStatus("sending");
+    setErrorDetail(null);
 
     try {
       const res = await fetch(ENDPOINT, {
@@ -25,12 +27,15 @@ export function AccessPage() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ name, email, reason }),
       });
+      const json = await res.json().catch(() => null);
       if (res.ok) {
         setStatus("success");
       } else {
+        setErrorDetail(json?.error ?? `HTTP ${res.status}`);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      setErrorDetail(err instanceof Error ? err.message : "Network error");
       setStatus("error");
     }
   }
@@ -161,7 +166,7 @@ export function AccessPage() {
 
             {status === "error" && (
               <p style={{ fontSize: 13, color: "#ff6b6b", margin: 0 }}>
-                {t("access.error")}
+                {t("access.error")}{errorDetail ? ` (${errorDetail})` : ""}
               </p>
             )}
 
