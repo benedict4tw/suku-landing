@@ -130,19 +130,19 @@ function HabitsCard() {
   const offset = circ * (1 - count / 100);
 
   return (
-    <div ref={circleRef} className="flex items-center gap-5 pt-1">
-      <svg width={100} height={100}>
+    <div ref={circleRef} className="flex flex-col items-center gap-3 pt-1">
+      <svg width={100} height={100} overflow="visible" style={{ flexShrink: 0 }}>
         <circle cx={50} cy={50} r={r} fill="none" stroke="rgba(5,227,194,0.1)" strokeWidth={8} />
         <circle
           cx={50} cy={50} r={r} fill="none"
           stroke="#05e3c2" strokeWidth={8} strokeLinecap="round"
           strokeDasharray={circ} strokeDashoffset={offset}
           transform="rotate(-90 50 50)"
-          style={{ transition: "stroke-dashoffset 0.05s linear", filter: "drop-shadow(0 0 6px rgba(5,227,194,0.7))" }}
+          style={{ transition: "stroke-dashoffset 0.05s linear", filter: "drop-shadow(0 0 8px rgba(5,227,194,0.8))" }}
         />
         <text x={50} y={55} textAnchor="middle" fill="#fff" fontSize={16} fontWeight={700} fontFamily="Inter">{count}%</text>
       </svg>
-      <div>
+      <div className="text-center">
         <div className="text-sm font-semibold text-white mb-1">{t("bento.habits.today")}</div>
         <div
           className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
