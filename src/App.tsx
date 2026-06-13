@@ -62,9 +62,9 @@ function LandingPage() {
         <Navbar />
         <HeroSection />
         <FeaturesBentoGrid />
+        <DemoSection />
         <TaglinesSection />
         <HowItWorks />
-        <DemoSection />
         <BuiltBySection />
         <FinalCTASection />
         <Footer />
