@@ -12,7 +12,7 @@ const STEPS = [
       </svg>
     ),
     title: "Tell Suku",
-    desc: "Type or speak anything — set a reminder, log a workout, plan your week. Natural language, always.",
+    desc: "Type or speak anything: set a reminder, log a workout, plan your week. Natural language, always.",
   },
   {
     num: "02",
@@ -22,7 +22,7 @@ const STEPS = [
       </svg>
     ),
     title: "Suku Acts",
-    desc: "Instantly creates tasks, sets reminders, updates habits, and plans your schedule — without you lifting a finger.",
+    desc: "Instantly creates tasks, sets reminders, updates habits, and plans your schedule. No extra steps needed.",
   },
   {
     num: "03",

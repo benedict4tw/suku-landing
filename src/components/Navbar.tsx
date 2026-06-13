@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SukuLogo } from "./SukuLogo";
 
-const DEMO_URL = "https://suku-teal.vercel.app?demo=true";
+const DEMO_URL = "/demo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,8 +17,8 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         background: scrolled
-          ? "rgba(4, 4, 74, 0.85)"
-          : "rgba(4, 4, 74, 0.5)",
+          ? "rgba(8, 8, 8, 0.92)"
+          : "rgba(8, 8, 8, 0.6)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
         borderBottom: scrolled
@@ -41,12 +41,10 @@ export function Navbar() {
         {/* Right */}
         <a
           href={DEMO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200"
           style={{
             background: "#05e3c2",
-            color: "#04044A",
+            color: "#080808",
           }}
           onMouseEnter={(e) => {
             (e.target as HTMLElement).style.background = "#00ccad";

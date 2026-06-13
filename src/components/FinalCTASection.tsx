@@ -1,7 +1,7 @@
 import { useReveal } from "../hooks/useReveal";
 import { ParticleCanvas } from "./ParticleCanvas";
 
-const DEMO_URL = "https://suku-teal.vercel.app?demo=true";
+const DEMO_URL = "/demo";
 
 export function FinalCTASection() {
   const ref = useReveal(0.2) as React.RefObject<HTMLDivElement>;
@@ -31,12 +31,10 @@ export function FinalCTASection() {
 
         <a
           href={DEMO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="px-10 py-5 rounded-full font-bold text-lg transition-all duration-200"
           style={{
             background: "#05e3c2",
-            color: "#04044A",
+            color: "#080808",
             boxShadow: "0 0 40px rgba(5,227,194,0.4), 0 0 80px rgba(5,227,194,0.15)",
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#00ccad"; (e.currentTarget as HTMLElement).style.boxShadow = "0 0 60px rgba(5,227,194,0.6), 0 0 100px rgba(5,227,194,0.2)"; }}

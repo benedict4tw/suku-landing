@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ParticleCanvas } from "./ParticleCanvas";
 import { VideoModal } from "./VideoModal";
 
-const DEMO_URL = "https://suku-teal.vercel.app?demo=true";
+const DEMO_URL = "/demo";
 
 export function HeroSection() {
   const [showModal, setShowModal] = useState(false);
@@ -71,17 +71,15 @@ export function HeroSection() {
           style={{ color: "rgba(255,255,255,0.55)" }}
         >
           Suku is your personal AI assistant that manages your tasks, projects, habits, workouts,
-          and calendar — and thinks ahead so you don't have to.
+          and calendar, thinking ahead so you don't have to.
         </p>
 
         {/* CTAs */}
         <div className="hero-cta flex flex-col sm:flex-row gap-4 items-center mb-8">
           <a
             href={DEMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="px-8 py-4 rounded-full font-semibold text-base transition-all duration-200 glow-pulse"
-            style={{ background: "#05e3c2", color: "#04044A" }}
+            style={{ background: "#05e3c2", color: "#080808" }}
             onMouseEnter={(e) => ((e.target as HTMLElement).style.background = "#00ccad")}
             onMouseLeave={(e) => ((e.target as HTMLElement).style.background = "#05e3c2")}
           >
