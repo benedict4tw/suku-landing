@@ -2,7 +2,7 @@ import { useState } from "react";
 import { supabase } from "../lib/supabase";
 
 const DEMO_EMAIL = "kevin@trysuku.live";
-const DEMO_PASSWORD = "SukuDemo2026!";
+const DEMO_PASSWORD = import.meta.env.VITE_DEMO_PASSWORD as string;
 const MAIN_APP_URL = "https://suku-teal.vercel.app";
 
 interface Props {
