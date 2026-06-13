@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useReveal } from "../hooks/useReveal";
 import { VideoModal } from "./VideoModal";
+import { DemoLoginButton } from "./DemoLoginButton";
 
 export function DemoSection() {
   const { t } = useTranslation();
@@ -101,19 +102,17 @@ export function DemoSection() {
         </div>
 
         <div className="text-center mt-10">
-          <a
-            href="/demo"
-            className="inline-flex px-8 py-4 rounded-full font-semibold text-base transition-all duration-200"
+          <DemoLoginButton
+            label={t("demoSection.cta")}
+            className="px-8 py-4 rounded-full font-semibold text-base border-none"
             style={{
               border: "1.5px solid rgba(5,227,194,0.4)",
               color: "#05e3c2",
               background: "rgba(5,227,194,0.05)",
             }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(5,227,194,0.12)")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(5,227,194,0.05)")}
-          >
-            {t("demoSection.cta")}
-          </a>
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(5,227,194,0.12)"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(5,227,194,0.05)"; }}
+          />
         </div>
       </div>
 

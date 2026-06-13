@@ -3,48 +3,48 @@
     "tryDemo": "Demo testen"
   },
   "hero": {
-    "badge": "Persönlicher KI-Lebens-OS",
-    "line1": "Alles was du bist.",
-    "line2": "Alles was du tust.",
-    "line3": "Ein Ort.",
-    "sub": "Suku ist dein persönlicher KI-Assistent, der deine Aufgaben, Projekte, Gewohnheiten, Workouts und Kalender verwaltet und vorausdenkt, damit du es nicht musst.",
+    "badge": "Persönlicher KI Lebensassistent",
+    "line1": "Dein Leben.",
+    "line2": "Ein System auf Autopilot.",
+    "line3": "",
+    "sub": "Suku ist dein persönlicher KI-Assistent der deine Aufgaben, Projekte, Gewohnheiten, Workouts und Kalender verwaltet und immer einen Schritt vorausdenkt.",
     "cta": "Demo testen →",
     "watchVideo": "Video ansehen",
-    "tagline": "Für eine Person gebaut. Perfekt."
+    "tagline": "Gemacht für dich. Nur für dich."
   },
   "bento": {
     "eyebrow": "Funktionen",
     "title": "Manage dein Leben wie ein CEO.",
     "chat": {
-      "title": "KI-Chat",
-      "desc": "Sprich mit Suku in natürlicher Sprache. Es handelt sofort.",
+      "title": "KI-Assistent",
+      "desc": "Sag Suku einfach was du brauchst.",
       "msg1user": "Erinnere mich morgen, den Zahnarzt anzurufen",
       "msg1ai": "Erledigt. Erinnerung für morgen 15 Uhr gesetzt ✓",
       "msg2user": "Und füge es meinem Kalender hinzu",
       "msg2ai": "Auch zu deinem Kalender hinzugefügt 📅"
     },
     "tasks": {
-      "title": "Aufgaben & Projekte",
-      "desc": "Alles erfasst, nichts vergessen.",
+      "title": "Aufgaben und Projekte",
+      "desc": "Alles organisiert an einem Ort.",
       "task1": "Neuen Hero designen",
       "task2": "Onboarding-Text schreiben",
       "task3": "Analytics einrichten"
     },
     "habits": {
-      "title": "Gewohnheiten-Tracker",
-      "desc": "Momentum aufbauen, Tag für Tag.",
+      "title": "Gewohnheiten",
+      "desc": "Verfolge deinen Fortschritt täglich.",
       "today": "Heutige Gewohnheiten",
       "performance": "✓ Leistung: Großartig",
       "streak": "12-Tage-Streak 🔥"
     },
     "gym": {
-      "title": "Gym-Tracker",
-      "desc": "Sets protokollieren, PRs verfolgen, Fortschritt sehen.",
+      "title": "Gym Tracker",
+      "desc": "Sieh wie du stärker wirst.",
       "volume": "Wöchentliches Volumen +18%"
     },
     "wb": {
       "title": "Whiteboards",
-      "desc": "Dein Denken visuell abbilden.",
+      "desc": "Denk frei. Plan visuell.",
       "goals": "Ziele",
       "fitness": "Fitness",
       "career": "Karriere",
@@ -53,7 +53,7 @@
     },
     "notif": {
       "title": "Proaktive Benachrichtigungen",
-      "desc": "Suku benachrichtigt dich, bevor du vergisst.",
+      "desc": "Suku findet dich. Nicht andersrum.",
       "phone": "Team-Standup in 10 Min. ⏰",
       "item1": "Standup in 10 Min. ⏰",
       "item2": "Morgenlauf protokolliert ✅",
@@ -62,13 +62,13 @@
   },
   "taglines": {
     "t1": "Manage dein Leben wie ein CEO.",
-    "t2": "Für eine Person gebaut. Perfekt.",
-    "t3": "Alles was du bist. Alles was du tust. Ein Ort."
+    "t2": "Gemacht für dich. Nur für dich.",
+    "t3": "Dein Leben. Ein System auf Autopilot."
   },
   "how": {
     "eyebrow": "So funktioniert es",
     "title": "Deine KI. Deine Regeln.",
-    "step1title": "Suku mitteilen",
+    "step1title": "Sag es Suku",
     "step1desc": "Tippe oder sprich alles: eine Erinnerung setzen, ein Workout protokollieren, deine Woche planen. Natürliche Sprache, immer.",
     "step2title": "Suku handelt",
     "step2desc": "Erstellt sofort Aufgaben, setzt Erinnerungen, aktualisiert Gewohnheiten und plant deinen Zeitplan. Keine zusätzlichen Schritte nötig.",
@@ -77,20 +77,20 @@
   },
   "demoSection": {
     "eyebrow": "Live erleben",
-    "title": "Suku in Aktion sehen.",
+    "title": "Sieh Suku in Aktion.",
     "cta": "Selbst ausprobieren →"
   },
   "builtby": {
     "prefix": "Ein Projekt von"
   },
   "cta": {
-    "title": "Bereit, dein Leben zu führen?",
-    "sub": "Teste die Demo. Kein Konto erforderlich.",
+    "title": "Bereit dein Leben zu managen?",
+    "sub": "Teste die Demo. Kein Account nötig.",
     "button": "Demo testen →",
     "domain": "trysuku.live"
   },
   "footer": {
-    "builtby": "Entwickelt von"
+    "builtby": "Ein Projekt von"
   },
   "access": {
     "back": "← Zurück",
