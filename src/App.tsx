@@ -65,8 +65,8 @@ function LandingPage() {
         <DemoSection />
         <TaglinesSection />
         <HowItWorks />
-        <BuiltBySection />
         <FinalCTASection />
+        <BuiltBySection />
         <Footer />
       </div>
     </div>
