@@ -30,7 +30,7 @@ export function BuiltBySection() {
             transition: "opacity 0.8s ease, transform 0.8s ease",
           }}
         >
-          Made by
+          A project by
         </p>
         <p
           style={{
