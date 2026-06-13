@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import { DemoLoginButton } from "./DemoLoginButton";
 
-const DEMO_URL = "/demo";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,22 +38,13 @@ export function Navbar() {
         </a>
 
         {/* Right */}
-        <a
-          href={DEMO_URL}
-          className="px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200"
-          style={{
-            background: "#05e3c2",
-            color: "#080808",
-          }}
-          onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.background = "#00ccad";
-          }}
-          onMouseLeave={(e) => {
-            (e.target as HTMLElement).style.background = "#05e3c2";
-          }}
-        >
-          Try Demo
-        </a>
+        <DemoLoginButton
+          label="Try Demo"
+          className="px-5 py-2 rounded-full text-sm font-semibold border-none"
+          style={{ background: "#05e3c2", color: "#080808" }}
+          onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#00ccad"; }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#05e3c2"; }}
+        />
       </div>
     </nav>
   );

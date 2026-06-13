@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { VideoModal } from "./VideoModal";
+import { DemoLoginButton } from "./DemoLoginButton";
 
-const DEMO_URL = "/demo";
 
 export function HeroSection() {
   const [showModal, setShowModal] = useState(false);
@@ -53,15 +53,13 @@ export function HeroSection() {
 
         {/* CTAs */}
         <div className="hero-cta flex flex-col sm:flex-row gap-4 items-center mb-8">
-          <a
-            href={DEMO_URL}
-            className="px-8 py-4 rounded-full font-semibold text-base transition-all duration-200 glow-pulse"
+          <DemoLoginButton
+            label="Try Demo →"
+            className="px-8 py-4 rounded-full font-semibold text-base border-none glow-pulse"
             style={{ background: "#05e3c2", color: "#080808" }}
-            onMouseEnter={(e) => ((e.target as HTMLElement).style.background = "#00ccad")}
-            onMouseLeave={(e) => ((e.target as HTMLElement).style.background = "#05e3c2")}
-          >
-            Try Demo →
-          </a>
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#00ccad"; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#05e3c2"; }}
+          />
           <button
             onClick={() => setShowModal(true)}
             className="px-8 py-4 rounded-full font-semibold text-base transition-all duration-200"

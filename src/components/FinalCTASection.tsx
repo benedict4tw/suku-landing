@@ -1,6 +1,6 @@
 import { useReveal } from "../hooks/useReveal";
+import { DemoLoginButton } from "./DemoLoginButton";
 
-const DEMO_URL = "/demo";
 
 export function FinalCTASection() {
   const ref = useReveal(0.2) as React.RefObject<HTMLDivElement>;
@@ -23,9 +23,9 @@ export function FinalCTASection() {
           Try the demo. No account needed.
         </p>
 
-        <a
-          href={DEMO_URL}
-          className="px-10 py-5 rounded-full font-bold text-lg transition-all duration-200"
+        <DemoLoginButton
+          label="Try Demo →"
+          className="px-10 py-5 rounded-full font-bold text-lg border-none"
           style={{
             background: "#05e3c2",
             color: "#080808",
@@ -33,9 +33,7 @@ export function FinalCTASection() {
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#00ccad"; (e.currentTarget as HTMLElement).style.boxShadow = "0 0 60px rgba(5,227,194,0.6), 0 0 100px rgba(5,227,194,0.2)"; }}
           onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#05e3c2"; (e.currentTarget as HTMLElement).style.boxShadow = "0 0 40px rgba(5,227,194,0.4), 0 0 80px rgba(5,227,194,0.15)"; }}
-        >
-          Try Demo →
-        </a>
+        />
 
         <p className="text-sm mt-8" style={{ color: "rgba(255,255,255,0.18)" }}>
           trysuku.live
