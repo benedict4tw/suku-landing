@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { ParticleCanvas } from "./components/ParticleCanvas";
 import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
@@ -75,12 +76,15 @@ function LandingPage() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/demo" element={<DemoPage />} />
-        <Route path="/access" element={<AccessPage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/demo" element={<DemoPage />} />
+          <Route path="/access" element={<AccessPage />} />
+        </Routes>
+      </BrowserRouter>
+      <Analytics />
+    </>
   );
 }
