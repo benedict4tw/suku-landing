@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useReveal } from "../hooks/useReveal";
 import { VideoModal } from "./VideoModal";
 
 export function DemoSection() {
+  const { t } = useTranslation();
   const titleRef = useReveal(0.2) as React.RefObject<HTMLDivElement>;
   const videoRef = useReveal(0.2) as React.RefObject<HTMLDivElement>;
   const [showModal, setShowModal] = useState(false);
@@ -31,10 +33,10 @@ export function DemoSection() {
       <div className="relative z-10 max-w-4xl mx-auto">
         <div ref={titleRef} className="reveal text-center mb-14">
           <p className="text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#05e3c2" }}>
-            See it live
+            {t("demoSection.eyebrow")}
           </p>
           <h2 className="font-black tracking-tight text-white" style={{ fontSize: "clamp(36px, 5vw, 64px)" }}>
-            See Suku in action.
+            {t("demoSection.title")}
           </h2>
         </div>
 
@@ -110,7 +112,7 @@ export function DemoSection() {
             onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(5,227,194,0.12)")}
             onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "rgba(5,227,194,0.05)")}
           >
-            Try it yourself →
+            {t("demoSection.cta")}
           </a>
         </div>
       </div>

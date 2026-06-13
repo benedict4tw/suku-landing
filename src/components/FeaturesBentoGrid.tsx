@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const CARD_BG = "rgba(8, 12, 52, 0.9)";
 const CARD_BORDER = "rgba(255,255,255,0.07)";
 
 /* ── Chat card ── */
-const CHAT_SEQUENCE = [
-  { from: "user", text: "Remind me to call dentist tomorrow" },
-  { from: "ai",   text: "Done. Reminder set for 3pm tomorrow ✓" },
-  { from: "user", text: "And add it to my calendar" },
-  { from: "ai",   text: "Added to your calendar as well 📅" },
-];
-
 function ChatCard() {
+  const { t } = useTranslation();
+  const CHAT_SEQUENCE = [
+    { from: "user", text: t("bento.chat.msg1user") },
+    { from: "ai",   text: t("bento.chat.msg1ai") },
+    { from: "user", text: t("bento.chat.msg2user") },
+    { from: "ai",   text: t("bento.chat.msg2ai") },
+  ];
+
   const [visible, setVisible] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -57,9 +59,9 @@ function ChatCard() {
 }
 
 /* ── Tasks card ── */
-const TASKS = ["Design new hero", "Write onboarding copy", "Set up analytics"];
-
 function TasksCard() {
+  const { t } = useTranslation();
+  const TASKS = [t("bento.tasks.task1"), t("bento.tasks.task2"), t("bento.tasks.task3")];
   const [checked, setChecked] = useState<boolean[]>([false, false, false]);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -77,7 +79,7 @@ function TasksCard() {
 
   return (
     <div ref={ref} className="flex flex-col gap-3 pt-1">
-      {TASKS.map((t, i) => (
+      {TASKS.map((task, i) => (
         <div key={i} className="flex items-center gap-3">
           <div
             className="w-5 h-5 rounded-md flex-shrink-0 flex items-center justify-center transition-all duration-300"
@@ -92,11 +94,10 @@ function TasksCard() {
             className="text-sm transition-all duration-300"
             style={{ color: checked[i] ? "rgba(255,255,255,0.35)" : "#fff", textDecoration: checked[i] ? "line-through" : "none" }}
           >
-            {t}
+            {task}
           </span>
         </div>
       ))}
-      {/* Progress bar */}
       <div className="mt-2 h-1.5 rounded-full" style={{ background: "rgba(255,255,255,0.07)" }}>
         <div
           className="h-full rounded-full transition-all duration-700"
@@ -109,7 +110,7 @@ function TasksCard() {
 
 /* ── Habit ring card ── */
 function HabitsCard() {
-  const ref = useRef<SVGCircleElement>(null);
+  const { t } = useTranslation();
   const [count, setCount] = useState(0);
   const circleRef = useRef<HTMLDivElement>(null);
 
@@ -133,7 +134,7 @@ function HabitsCard() {
       <svg width={100} height={100}>
         <circle cx={50} cy={50} r={r} fill="none" stroke="rgba(5,227,194,0.1)" strokeWidth={8} />
         <circle
-          ref={ref} cx={50} cy={50} r={r} fill="none"
+          cx={50} cy={50} r={r} fill="none"
           stroke="#05e3c2" strokeWidth={8} strokeLinecap="round"
           strokeDasharray={circ} strokeDashoffset={offset}
           transform="rotate(-90 50 50)"
@@ -142,14 +143,14 @@ function HabitsCard() {
         <text x={50} y={55} textAnchor="middle" fill="#fff" fontSize={16} fontWeight={700} fontFamily="Inter">{count}%</text>
       </svg>
       <div>
-        <div className="text-sm font-semibold text-white mb-1">Today's habits</div>
+        <div className="text-sm font-semibold text-white mb-1">{t("bento.habits.today")}</div>
         <div
           className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
           style={{ background: "rgba(5,227,194,0.15)", border: "1px solid rgba(5,227,194,0.3)", color: "#05e3c2" }}
         >
-          ✓ Performance: Great
+          {t("bento.habits.performance")}
         </div>
-        <div className="text-xs mt-2" style={{ color: "rgba(255,255,255,0.35)" }}>12-day streak 🔥</div>
+        <div className="text-xs mt-2" style={{ color: "rgba(255,255,255,0.35)" }}>{t("bento.habits.streak")}</div>
       </div>
     </div>
   );
@@ -159,7 +160,7 @@ function HabitsCard() {
 const GYM_PTS = [30, 55, 42, 70, 65, 88, 75, 95];
 
 function GymCard() {
-  const pathRef = useRef<SVGPolylineElement>(null);
+  const { t } = useTranslation();
   const wrapRef = useRef<HTMLDivElement>(null);
   const [drawn, setDrawn] = useState(false);
 
@@ -182,7 +183,6 @@ function GymCard() {
           <line key={t} x1={0} y1={H * (1-t)} x2={W} y2={H * (1-t)} stroke="rgba(5,227,194,0.07)" strokeWidth={1} />
         ))}
         <polyline
-          ref={pathRef}
           points={pts}
           fill="none" stroke="#05e3c2" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round"
           strokeDasharray={pathLen}
@@ -199,24 +199,25 @@ function GymCard() {
         >
           🏆 PR
         </div>
-        <span className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>Weekly volume +18%</span>
+        <span className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>{t("bento.gym.volume")}</span>
       </div>
     </div>
   );
 }
 
 /* ── Whiteboard card ── */
-const WB_NODES = [
-  { x: 80, y: 55, label: "Goals", r: 28, color: "#05e3c2", delay: 0 },
-  { x: 30, y: 20, label: "Fitness", r: 22, color: "#0062FF", delay: 0.3 },
-  { x: 140, y: 20, label: "Career", r: 22, color: "#0062FF", delay: 0.5 },
-  { x: 20, y: 80, label: "Learn", r: 18, color: "#C9A84C", delay: 0.7 },
-  { x: 145, y: 80, label: "Travel", r: 18, color: "#C9A84C", delay: 0.9 },
-];
-
 function WhiteboardCard() {
+  const { t } = useTranslation();
   const [shown, setShown] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  const WB_NODES = [
+    { x: 80, y: 55, label: t("bento.wb.goals"),   r: 28, color: "#05e3c2", delay: 0 },
+    { x: 30, y: 20, label: t("bento.wb.fitness"),  r: 22, color: "#0062FF", delay: 0.3 },
+    { x: 140, y: 20, label: t("bento.wb.career"),  r: 22, color: "#0062FF", delay: 0.5 },
+    { x: 20, y: 80, label: t("bento.wb.learn"),    r: 18, color: "#C9A84C", delay: 0.7 },
+    { x: 145, y: 80, label: t("bento.wb.travel"),  r: 18, color: "#C9A84C", delay: 0.9 },
+  ];
 
   useEffect(() => {
     const io = new IntersectionObserver(([e]) => {
@@ -250,11 +251,12 @@ function WhiteboardCard() {
   );
 }
 
-/* ── Notifications card (iPhone) ── */
+/* ── Notifications card ── */
 function NotifCard() {
+  const { t } = useTranslation();
+
   return (
     <div className="flex items-center gap-6 pt-1">
-      {/* iPhone */}
       <div
         className="relative flex-shrink-0"
         style={{
@@ -265,11 +267,8 @@ function NotifCard() {
           overflow: "hidden",
         }}
       >
-        {/* Notch */}
         <div style={{ position: "absolute", top: 8, left: "50%", transform: "translateX(-50%)", width: 36, height: 6, borderRadius: 3, background: "#020212" }} />
-        {/* Screen content */}
         <div style={{ position: "absolute", inset: 0, top: 24, display: "flex", alignItems: "flex-start", justifyContent: "center", padding: "8px 6px" }}>
-          {/* Notification banner */}
           <div
             className="notif-drop w-full"
             style={{
@@ -284,15 +283,14 @@ function NotifCard() {
               <span style={{ fontSize: 9, fontWeight: 700, color: "#fff", fontFamily: "Inter" }}>Suku</span>
             </div>
             <p style={{ fontSize: 8, color: "rgba(255,255,255,0.8)", fontFamily: "Inter", margin: 0, lineHeight: 1.4 }}>
-              Team standup in 10 min ⏰
+              {t("bento.notif.phone")}
             </p>
           </div>
         </div>
-        {/* Home bar */}
         <div style={{ position: "absolute", bottom: 6, left: "50%", transform: "translateX(-50%)", width: 40, height: 3, borderRadius: 2, background: "rgba(255,255,255,0.2)" }} />
       </div>
       <div className="flex flex-col gap-2">
-        {["Standup in 10min ⏰","Morning run logged ✅","2 tasks due today 💡"].map((n, i) => (
+        {[t("bento.notif.item1"), t("bento.notif.item2"), t("bento.notif.item3")].map((n, i) => (
           <div key={i} className="text-xs px-2 py-1 rounded-lg" style={{ background: "rgba(5,227,194,0.07)", border: "1px solid rgba(5,227,194,0.15)", color: "rgba(255,255,255,0.7)" }}>
             {n}
           </div>
@@ -311,6 +309,7 @@ const CARD_STYLE = {
 };
 
 export function FeaturesBentoGrid() {
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
 
@@ -322,14 +321,7 @@ export function FeaturesBentoGrid() {
     return () => io.disconnect();
   }, []);
 
-  const cards = [
-    { id: "chat",  span: "col-span-2", delay: 0 },
-    { id: "tasks", span: "col-span-1", delay: 0.1 },
-    { id: "habit", span: "col-span-1", delay: 0.2 },
-    { id: "gym",   span: "col-span-1", delay: 0.3 },
-    { id: "wb",    span: "col-span-1", delay: 0.4 },
-    { id: "notif", span: "col-span-2", delay: 0.5 },
-  ];
+  const delays = [0, 0.1, 0.2, 0.3, 0.4, 0.5];
 
   return (
     <section ref={sectionRef as React.RefObject<HTMLElement>} className="py-28 px-6 max-w-7xl mx-auto">
@@ -338,113 +330,73 @@ export function FeaturesBentoGrid() {
         className="text-center mb-16 reveal"
         ref={(el) => { if (el) { const io = new IntersectionObserver(([e]) => { if(e.isIntersecting){el.classList.add("visible");io.disconnect();} },{threshold:0.2}); io.observe(el); } }}
       >
-        <p className="text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#05e3c2" }}>Features</p>
+        <p className="text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#05e3c2" }}>
+          {t("bento.eyebrow")}
+        </p>
         <h2 className="font-black tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", color: "#fff" }}>
-          Manage your life like a CEO.
+          {t("bento.title")}
         </h2>
       </div>
 
       {/* Bento grid */}
       <div className="grid grid-cols-4 gap-5">
         {/* Chat — wide */}
-        <div
-          className={`col-span-4 md:col-span-2 feature-card`}
-          style={{
-            ...CARD_STYLE,
-            opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)",
-            transition: `opacity 0.6s ease ${cards[0].delay}s, transform 0.6s ease ${cards[0].delay}s`,
-          }}
-        >
+        <div className="col-span-4 md:col-span-2 feature-card" style={{ ...CARD_STYLE, opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delays[0]}s, transform 0.6s ease ${delays[0]}s` }}>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xl">💬</span>
-            <span className="font-semibold text-white text-sm">AI Chat</span>
+            <span className="font-semibold text-white text-sm">{t("bento.chat.title")}</span>
           </div>
-          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>Talk to Suku in plain language. It acts immediately.</p>
+          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{t("bento.chat.desc")}</p>
           <ChatCard />
         </div>
 
         {/* Tasks */}
-        <div
-          className="col-span-4 md:col-span-1 feature-card"
-          style={{
-            ...CARD_STYLE,
-            opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)",
-            transition: `opacity 0.6s ease ${cards[1].delay}s, transform 0.6s ease ${cards[1].delay}s`,
-          }}
-        >
+        <div className="col-span-4 md:col-span-1 feature-card" style={{ ...CARD_STYLE, opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delays[1]}s, transform 0.6s ease ${delays[1]}s` }}>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xl">✅</span>
-            <span className="font-semibold text-white text-sm">Tasks & Projects</span>
+            <span className="font-semibold text-white text-sm">{t("bento.tasks.title")}</span>
           </div>
-          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>Everything tracked, nothing forgotten.</p>
+          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{t("bento.tasks.desc")}</p>
           <TasksCard />
         </div>
 
         {/* Habits */}
-        <div
-          className="col-span-4 md:col-span-1 feature-card"
-          style={{
-            ...CARD_STYLE,
-            opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)",
-            transition: `opacity 0.6s ease ${cards[2].delay}s, transform 0.6s ease ${cards[2].delay}s`,
-          }}
-        >
+        <div className="col-span-4 md:col-span-1 feature-card" style={{ ...CARD_STYLE, opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delays[2]}s, transform 0.6s ease ${delays[2]}s` }}>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xl">🔥</span>
-            <span className="font-semibold text-white text-sm">Habits Tracker</span>
+            <span className="font-semibold text-white text-sm">{t("bento.habits.title")}</span>
           </div>
-          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>Build momentum, day by day.</p>
+          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{t("bento.habits.desc")}</p>
           <HabitsCard />
         </div>
 
         {/* Gym */}
-        <div
-          className="col-span-4 md:col-span-1 feature-card"
-          style={{
-            ...CARD_STYLE,
-            opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)",
-            transition: `opacity 0.6s ease ${cards[3].delay}s, transform 0.6s ease ${cards[3].delay}s`,
-          }}
-        >
+        <div className="col-span-4 md:col-span-1 feature-card" style={{ ...CARD_STYLE, opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delays[3]}s, transform 0.6s ease ${delays[3]}s` }}>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xl">💪</span>
-            <span className="font-semibold text-white text-sm">Gym Tracker</span>
+            <span className="font-semibold text-white text-sm">{t("bento.gym.title")}</span>
           </div>
-          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>Log sets, track PRs, see progress.</p>
+          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{t("bento.gym.desc")}</p>
           <GymCard />
         </div>
 
         {/* Whiteboard */}
-        <div
-          className="col-span-4 md:col-span-1 feature-card"
-          style={{
-            ...CARD_STYLE,
-            opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)",
-            transition: `opacity 0.6s ease ${cards[4].delay}s, transform 0.6s ease ${cards[4].delay}s`,
-          }}
-        >
+        <div className="col-span-4 md:col-span-1 feature-card" style={{ ...CARD_STYLE, opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delays[4]}s, transform 0.6s ease ${delays[4]}s` }}>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xl">🗺️</span>
-            <span className="font-semibold text-white text-sm">Whiteboards</span>
+            <span className="font-semibold text-white text-sm">{t("bento.wb.title")}</span>
           </div>
-          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>Map your thinking visually.</p>
+          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{t("bento.wb.desc")}</p>
           <WhiteboardCard />
         </div>
 
         {/* Notifications — wide */}
-        <div
-          className="col-span-4 md:col-span-2 feature-card"
-          style={{
-            ...CARD_STYLE,
-            opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)",
-            transition: `opacity 0.6s ease ${cards[5].delay}s, transform 0.6s ease ${cards[5].delay}s`,
-          }}
-        >
+        <div className="col-span-4 md:col-span-2 feature-card" style={{ ...CARD_STYLE, opacity: sectionVisible ? 1 : 0, transform: sectionVisible ? "translateY(0)" : "translateY(24px)", transition: `opacity 0.6s ease ${delays[5]}s, transform 0.6s ease ${delays[5]}s` }}>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xl">🔔</span>
-            <span className="font-semibold text-white text-sm">Proactive Notifications</span>
+            <span className="font-semibold text-white text-sm">{t("bento.notif.title")}</span>
           </div>
-          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>Suku notifies you before you forget.</p>
+          <p className="text-xs mb-4" style={{ color: "rgba(255,255,255,0.4)" }}>{t("bento.notif.desc")}</p>
           <NotifCard />
         </div>
       </div>

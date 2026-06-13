@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // To wire up email delivery:
 // 1. Go to https://formspree.io and sign in with your Gmail
@@ -7,6 +8,7 @@ import { useState } from "react";
 const ENDPOINT = `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_ID ?? ""}`;
 
 export function AccessPage() {
+  const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [reason, setReason] = useState("");
@@ -61,7 +63,7 @@ export function AccessPage() {
         onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.7)")}
         onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.3)")}
       >
-        ← Back
+        {t("access.back")}
       </a>
 
       {status === "success" ? (
@@ -70,16 +72,16 @@ export function AccessPage() {
             ✓
           </div>
           <h1 style={{ fontSize: 28, fontWeight: 800, color: "#fff", marginBottom: 12, letterSpacing: "-0.02em" }}>
-            You're on the list.
+            {t("access.successTitle")}
           </h1>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, marginBottom: 32 }}>
-            I'll be in touch soon. Suku is built for people who actually want to take control of their life.
+            {t("access.successSub")}
           </p>
           <a
             href="/"
             style={{ display: "inline-block", padding: "12px 28px", borderRadius: 100, background: "#05e3c2", color: "#080808", fontWeight: 700, fontSize: 15, textDecoration: "none" }}
           >
-            Back to homepage
+            {t("access.successCta")}
           </a>
         </div>
       ) : (
@@ -96,13 +98,13 @@ export function AccessPage() {
               }}
             >
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#05e3c2", boxShadow: "0 0 6px #05e3c2" }} />
-              Early Access
+              {t("access.badge")}
             </div>
             <h1 style={{ fontSize: "clamp(28px, 5vw, 40px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", lineHeight: 1.1, margin: "0 0 12px" }}>
-              Get full access to Suku.
+              {t("access.title")}
             </h1>
             <p style={{ fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.6, margin: 0 }}>
-              Fill out the form below and I'll reach out to you directly.
+              {t("access.sub")}
             </p>
           </div>
 
@@ -119,10 +121,10 @@ export function AccessPage() {
               gap: 20,
             }}
           >
-            <Field label="Your name" required>
+            <Field label={t("access.nameLabel")} required>
               <input
                 type="text"
-                placeholder="Kevin"
+                placeholder={t("access.namePlaceholder")}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -132,10 +134,10 @@ export function AccessPage() {
               />
             </Field>
 
-            <Field label="Your email" required>
+            <Field label={t("access.emailLabel")} required>
               <input
                 type="email"
-                placeholder="kevin@example.com"
+                placeholder={t("access.emailPlaceholder")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -145,9 +147,9 @@ export function AccessPage() {
               />
             </Field>
 
-            <Field label="What do you want to use Suku for?">
+            <Field label={t("access.reasonLabel")}>
               <textarea
-                placeholder="Managing tasks, building better habits, tracking workouts..."
+                placeholder={t("access.reasonPlaceholder")}
                 value={reason}
                 onChange={(e) => setReason(e.target.value)}
                 rows={3}
@@ -159,7 +161,7 @@ export function AccessPage() {
 
             {status === "error" && (
               <p style={{ fontSize: 13, color: "#ff6b6b", margin: 0 }}>
-                Something went wrong. Try again or email us directly.
+                {t("access.error")}
               </p>
             )}
 
@@ -188,16 +190,16 @@ export function AccessPage() {
               {status === "sending" ? (
                 <>
                   <span style={{ width: 14, height: 14, border: "2px solid #080808", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.7s linear infinite", display: "inline-block" }} />
-                  Sending…
+                  {t("access.sending")}
                 </>
               ) : (
-                "Request Access →"
+                t("access.submit")
               )}
             </button>
           </form>
 
           <p style={{ textAlign: "center", fontSize: 12, color: "rgba(255,255,255,0.2)", marginTop: 20 }}>
-            No spam. No newsletters. Just a reply from me.
+            {t("access.note")}
           </p>
         </div>
       )}

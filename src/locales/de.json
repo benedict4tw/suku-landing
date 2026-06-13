@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "tryDemo": "Demo testen"
+  },
+  "hero": {
+    "badge": "Persönlicher KI-Lebens-OS",
+    "line1": "Alles was du bist.",
+    "line2": "Alles was du tust.",
+    "line3": "Ein Ort.",
+    "sub": "Suku ist dein persönlicher KI-Assistent, der deine Aufgaben, Projekte, Gewohnheiten, Workouts und Kalender verwaltet und vorausdenkt, damit du es nicht musst.",
+    "cta": "Demo testen →",
+    "watchVideo": "Video ansehen",
+    "tagline": "Für eine Person gebaut. Perfekt."
+  },
+  "bento": {
+    "eyebrow": "Funktionen",
+    "title": "Manage dein Leben wie ein CEO.",
+    "chat": {
+      "title": "KI-Chat",
+      "desc": "Sprich mit Suku in natürlicher Sprache. Es handelt sofort.",
+      "msg1user": "Erinnere mich morgen, den Zahnarzt anzurufen",
+      "msg1ai": "Erledigt. Erinnerung für morgen 15 Uhr gesetzt ✓",
+      "msg2user": "Und füge es meinem Kalender hinzu",
+      "msg2ai": "Auch zu deinem Kalender hinzugefügt 📅"
+    },
+    "tasks": {
+      "title": "Aufgaben & Projekte",
+      "desc": "Alles erfasst, nichts vergessen.",
+      "task1": "Neuen Hero designen",
+      "task2": "Onboarding-Text schreiben",
+      "task3": "Analytics einrichten"
+    },
+    "habits": {
+      "title": "Gewohnheiten-Tracker",
+      "desc": "Momentum aufbauen, Tag für Tag.",
+      "today": "Heutige Gewohnheiten",
+      "performance": "✓ Leistung: Großartig",
+      "streak": "12-Tage-Streak 🔥"
+    },
+    "gym": {
+      "title": "Gym-Tracker",
+      "desc": "Sets protokollieren, PRs verfolgen, Fortschritt sehen.",
+      "volume": "Wöchentliches Volumen +18%"
+    },
+    "wb": {
+      "title": "Whiteboards",
+      "desc": "Dein Denken visuell abbilden.",
+      "goals": "Ziele",
+      "fitness": "Fitness",
+      "career": "Karriere",
+      "learn": "Lernen",
+      "travel": "Reisen"
+    },
+    "notif": {
+      "title": "Proaktive Benachrichtigungen",
+      "desc": "Suku benachrichtigt dich, bevor du vergisst.",
+      "phone": "Team-Standup in 10 Min. ⏰",
+      "item1": "Standup in 10 Min. ⏰",
+      "item2": "Morgenlauf protokolliert ✅",
+      "item3": "2 Aufgaben fällig heute 💡"
+    }
+  },
+  "taglines": {
+    "t1": "Manage dein Leben wie ein CEO.",
+    "t2": "Für eine Person gebaut. Perfekt.",
+    "t3": "Alles was du bist. Alles was du tust. Ein Ort."
+  },
+  "how": {
+    "eyebrow": "So funktioniert es",
+    "title": "Deine KI. Deine Regeln.",
+    "step1title": "Suku mitteilen",
+    "step1desc": "Tippe oder sprich alles: eine Erinnerung setzen, ein Workout protokollieren, deine Woche planen. Natürliche Sprache, immer.",
+    "step2title": "Suku handelt",
+    "step2desc": "Erstellt sofort Aufgaben, setzt Erinnerungen, aktualisiert Gewohnheiten und plant deinen Zeitplan. Keine zusätzlichen Schritte nötig.",
+    "step3title": "Du wirst benachrichtigt",
+    "step3desc": "Erhalte smarte, proaktive Benachrichtigungen genau zum richtigen Zeitpunkt. Suku denkt voraus, damit du es nicht musst."
+  },
+  "demoSection": {
+    "eyebrow": "Live erleben",
+    "title": "Suku in Aktion sehen.",
+    "cta": "Selbst ausprobieren →"
+  },
+  "builtby": {
+    "prefix": "Ein Projekt von"
+  },
+  "cta": {
+    "title": "Bereit, dein Leben zu führen?",
+    "sub": "Teste die Demo. Kein Konto erforderlich.",
+    "button": "Demo testen →",
+    "domain": "trysuku.live"
+  },
+  "footer": {
+    "builtby": "Entwickelt von"
+  },
+  "access": {
+    "back": "← Zurück",
+    "successTitle": "Du bist auf der Liste.",
+    "successSub": "Ich melde mich bald. Suku ist für Menschen gebaut, die wirklich die Kontrolle über ihr Leben übernehmen wollen.",
+    "successCta": "Zurück zur Startseite",
+    "badge": "Früher Zugang",
+    "title": "Vollzugang zu Suku erhalten.",
+    "sub": "Fülle das Formular aus und ich melde mich direkt bei dir.",
+    "nameLabel": "Dein Name",
+    "namePlaceholder": "Kevin",
+    "emailLabel": "Deine E-Mail",
+    "emailPlaceholder": "kevin@beispiel.de",
+    "reasonLabel": "Wofür möchtest du Suku nutzen?",
+    "reasonPlaceholder": "Aufgaben verwalten, bessere Gewohnheiten aufbauen, Training verfolgen...",
+    "error": "Etwas ist schiefgelaufen. Versuche es später erneut.",
+    "sending": "Wird gesendet…",
+    "submit": "Zugang anfragen →",
+    "note": "Kein Spam. Keine Newsletter. Nur eine Antwort von mir."
+  }
+}

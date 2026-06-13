@@ -1,8 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { useReveal } from "../hooks/useReveal";
 import { DemoLoginButton } from "./DemoLoginButton";
 
-
 export function FinalCTASection() {
+  const { t } = useTranslation();
   const ref = useReveal(0.2) as React.RefObject<HTMLDivElement>;
 
   return (
@@ -10,21 +11,20 @@ export function FinalCTASection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
     >
-
       <div ref={ref} className="reveal relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
         <h2
           className="font-black tracking-tight text-white mb-6"
           style={{ fontSize: "clamp(44px, 7vw, 96px)", lineHeight: 1.05 }}
         >
-          Ready to run your life?
+          {t("cta.title")}
         </h2>
 
         <p className="text-lg mb-12" style={{ color: "rgba(255,255,255,0.45)" }}>
-          Try the demo. No account needed.
+          {t("cta.sub")}
         </p>
 
         <DemoLoginButton
-          label="Try Demo →"
+          label={t("cta.button")}
           className="px-10 py-5 rounded-full font-bold text-lg border-none"
           style={{
             background: "#05e3c2",
@@ -36,7 +36,7 @@ export function FinalCTASection() {
         />
 
         <p className="text-sm mt-8" style={{ color: "rgba(255,255,255,0.18)" }}>
-          trysuku.live
+          {t("cta.domain")}
         </p>
       </div>
     </section>

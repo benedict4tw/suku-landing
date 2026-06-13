@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "tryDemo": "Try Demo"
+  },
+  "hero": {
+    "badge": "Personal AI Life OS",
+    "line1": "Everything you are.",
+    "line2": "Everything you do.",
+    "line3": "One place.",
+    "sub": "Suku is your personal AI assistant that manages your tasks, projects, habits, workouts, and calendar, thinking ahead so you don't have to.",
+    "cta": "Try Demo →",
+    "watchVideo": "Watch Video",
+    "tagline": "Built for one person. Perfectly."
+  },
+  "bento": {
+    "eyebrow": "Features",
+    "title": "Manage your life like a CEO.",
+    "chat": {
+      "title": "AI Chat",
+      "desc": "Talk to Suku in plain language. It acts immediately.",
+      "msg1user": "Remind me to call dentist tomorrow",
+      "msg1ai": "Done. Reminder set for 3pm tomorrow ✓",
+      "msg2user": "And add it to my calendar",
+      "msg2ai": "Added to your calendar as well 📅"
+    },
+    "tasks": {
+      "title": "Tasks & Projects",
+      "desc": "Everything tracked, nothing forgotten.",
+      "task1": "Design new hero",
+      "task2": "Write onboarding copy",
+      "task3": "Set up analytics"
+    },
+    "habits": {
+      "title": "Habits Tracker",
+      "desc": "Build momentum, day by day.",
+      "today": "Today's habits",
+      "performance": "✓ Performance: Great",
+      "streak": "12-day streak 🔥"
+    },
+    "gym": {
+      "title": "Gym Tracker",
+      "desc": "Log sets, track PRs, see progress.",
+      "volume": "Weekly volume +18%"
+    },
+    "wb": {
+      "title": "Whiteboards",
+      "desc": "Map your thinking visually.",
+      "goals": "Goals",
+      "fitness": "Fitness",
+      "career": "Career",
+      "learn": "Learn",
+      "travel": "Travel"
+    },
+    "notif": {
+      "title": "Proactive Notifications",
+      "desc": "Suku notifies you before you forget.",
+      "phone": "Team standup in 10 min ⏰",
+      "item1": "Standup in 10min ⏰",
+      "item2": "Morning run logged ✅",
+      "item3": "2 tasks due today 💡"
+    }
+  },
+  "taglines": {
+    "t1": "Manage your life like a CEO.",
+    "t2": "Built for one person. Perfectly.",
+    "t3": "Everything you are. Everything you do. One place."
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Your AI. Your rules.",
+    "step1title": "Tell Suku",
+    "step1desc": "Type or speak anything: set a reminder, log a workout, plan your week. Natural language, always.",
+    "step2title": "Suku Acts",
+    "step2desc": "Instantly creates tasks, sets reminders, updates habits, and plans your schedule. No extra steps needed.",
+    "step3title": "You're Notified",
+    "step3desc": "Get smart, proactive alerts at exactly the right moment. Suku thinks ahead so you don't have to."
+  },
+  "demoSection": {
+    "eyebrow": "See it live",
+    "title": "See Suku in action.",
+    "cta": "Try it yourself →"
+  },
+  "builtby": {
+    "prefix": "A project by"
+  },
+  "cta": {
+    "title": "Ready to run your life?",
+    "sub": "Try the demo. No account needed.",
+    "button": "Try Demo →",
+    "domain": "trysuku.live"
+  },
+  "footer": {
+    "builtby": "Built by"
+  },
+  "access": {
+    "back": "← Back",
+    "successTitle": "You're on the list.",
+    "successSub": "I'll be in touch soon. Suku is built for people who actually want to take control of their life.",
+    "successCta": "Back to homepage",
+    "badge": "Early Access",
+    "title": "Get full access to Suku.",
+    "sub": "Fill out the form below and I'll reach out to you directly.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Kevin",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "kevin@example.com",
+    "reasonLabel": "What do you want to use Suku for?",
+    "reasonPlaceholder": "Managing tasks, building better habits, tracking workouts...",
+    "error": "Something went wrong. Try again later.",
+    "sending": "Sending…",
+    "submit": "Request Access →",
+    "note": "No spam. No newsletters. Just a reply from me."
+  }
+}
