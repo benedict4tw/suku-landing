@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ParticleCanvas } from "./ParticleCanvas";
 import { VideoModal } from "./VideoModal";
 
 const DEMO_URL = "/demo";
@@ -12,28 +11,6 @@ export function HeroSection() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{ paddingTop: 64 }}
     >
-      {/* Particle canvas */}
-      <ParticleCanvas />
-
-      {/* Background orbs */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          width: 700, height: 700, borderRadius: "50%",
-          bottom: -200, left: -200,
-          background: "radial-gradient(circle, rgba(5,227,194,0.12) 0%, transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          width: 600, height: 600, borderRadius: "50%",
-          top: -100, right: -150,
-          background: "radial-gradient(circle, rgba(0,98,255,0.14) 0%, transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-5xl mx-auto">

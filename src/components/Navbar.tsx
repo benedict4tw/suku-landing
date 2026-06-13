@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { SukuLogo } from "./SukuLogo";
 
 const DEMO_URL = "/demo";
 
@@ -29,7 +28,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo + wordmark */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <SukuLogo size={30} />
+          <img src="/SUKU-Logov1.png" style={{ width: 30, height: 30, objectFit: "contain" }} alt="Suku" />
           <span
             className="text-white font-bold text-xl tracking-tight"
             style={{ fontFamily: "Inter, sans-serif" }}

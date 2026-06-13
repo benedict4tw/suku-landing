@@ -1,5 +1,4 @@
 import { useReveal } from "../hooks/useReveal";
-import { ParticleCanvas } from "./ParticleCanvas";
 
 const DEMO_URL = "/demo";
 
@@ -11,11 +10,6 @@ export function FinalCTASection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
     >
-      <ParticleCanvas />
-
-      {/* Orbs */}
-      <div className="absolute pointer-events-none" style={{ width: 600, height: 600, borderRadius: "50%", bottom: -200, right: -150, background: "radial-gradient(circle, rgba(0,98,255,0.12) 0%, transparent 70%)", filter: "blur(80px)" }} />
-      <div className="absolute pointer-events-none" style={{ width: 500, height: 500, borderRadius: "50%", top: -100, left: -100, background: "radial-gradient(circle, rgba(5,227,194,0.1) 0%, transparent 70%)", filter: "blur(80px)" }} />
 
       <div ref={ref} className="reveal relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
         <h2

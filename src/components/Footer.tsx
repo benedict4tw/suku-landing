@@ -1,5 +1,3 @@
-import { SukuLogo } from "./SukuLogo";
-
 export function Footer() {
   return (
     <footer
@@ -9,7 +7,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <SukuLogo size={22} />
+          <img src="/SUKU-Logov1.png" style={{ width: 22, height: 22, objectFit: "contain" }} alt="Suku" />
           <span className="font-bold text-white text-base">Suku</span>
         </div>
 

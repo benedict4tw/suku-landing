@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { SukuLogo } from "../components/SukuLogo";
 
 const TEAL = "#05e3c2";
 const BG = "#080808";
@@ -75,7 +74,7 @@ export function DemoPage() {
       }}>
         {/* Logo */}
         <div style={{ padding: "20px 20px 16px", borderBottom: `1px solid ${BORDER}`, display: "flex", alignItems: "center", gap: 10 }}>
-          <SukuLogo size={28} />
+          <img src="/SUKU-Logov1.png" style={{ width: 28, height: 28, objectFit: "contain" }} alt="Suku" />
           <span style={{ fontWeight: 700, fontSize: 18, color: "#fff" }}>Suku</span>
         </div>
 
