@@ -10,6 +10,7 @@ import { BuiltBySection } from "./components/BuiltBySection";
 import { FinalCTASection } from "./components/FinalCTASection";
 import { Footer } from "./components/Footer";
 import { DemoPage } from "./pages/DemoPage";
+import { AccessPage } from "./pages/AccessPage";
 
 /* Global background — fixed so it spans every section as one canvas */
 function GlobalBackground() {
@@ -78,6 +79,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/demo" element={<DemoPage />} />
+        <Route path="/access" element={<AccessPage />} />
       </Routes>
     </BrowserRouter>
   );
