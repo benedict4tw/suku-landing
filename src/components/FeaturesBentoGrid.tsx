@@ -20,14 +20,12 @@ function ChatCard() {
   useEffect(() => {
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) {
+        io.disconnect();
         let i = 0;
         const iv = setInterval(() => {
           i++;
           setVisible(i);
-          if (i >= CHAT_SEQUENCE.length) {
-            clearInterval(iv);
-            setTimeout(() => setVisible(0), 1800);
-          }
+          if (i >= CHAT_SEQUENCE.length) clearInterval(iv);
         }, 1100);
         return () => clearInterval(iv);
       }
@@ -178,7 +176,7 @@ function GymCard() {
 
   return (
     <div ref={wrapRef} className="pt-1">
-      <svg width={W} height={H + 10}>
+      <svg width="100%" viewBox={`0 0 ${W} ${H + 10}`} style={{ display: "block", overflow: "visible" }}>
         {[0, 0.5, 1].map((t) => (
           <line key={t} x1={0} y1={H * (1-t)} x2={W} y2={H * (1-t)} stroke="rgba(5,227,194,0.07)" strokeWidth={1} />
         ))}
@@ -229,7 +227,7 @@ function WhiteboardCard() {
 
   return (
     <div ref={ref} className="pt-1">
-      <svg width={180} height={110} overflow="visible">
+      <svg width="100%" viewBox="-10 -10 200 130" style={{ display: "block", overflow: "visible" }}>
         {WB_NODES.slice(1).map((n, i) => (
           <line key={i} x1={WB_NODES[0].x} y1={WB_NODES[0].y} x2={n.x} y2={n.y}
             stroke={n.color} strokeWidth={1.2} opacity={0.3} strokeDasharray="4 3" />
