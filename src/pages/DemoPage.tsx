@@ -152,7 +152,7 @@ export function DemoPage() {
             You are viewing a demo version of Suku. The real app is more powerful.
           </span>
           <a
-            href="https://suku-teal.vercel.app"
+            href="https://www.suku.ink"
             target="_blank"
             rel="noopener noreferrer"
             style={{

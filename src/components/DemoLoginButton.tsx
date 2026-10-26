@@ -3,7 +3,7 @@ import { supabase } from "../lib/supabase";
 
 const DEMO_EMAIL = "kevin@trysuku.live";
 const DEMO_PASSWORD = import.meta.env.VITE_DEMO_PASSWORD as string;
-const MAIN_APP_URL = "https://suku-teal.vercel.app";
+const MAIN_APP_URL = "https://www.suku.ink";
 
 interface Props {
   className?: string;
