@@ -25,7 +25,7 @@
     "sub": "Aufgaben, Projekte, Gewohnheiten, Workouts und dein Kalender in einem ruhigen Dashboard. Mit einer KI, die dir sagt, was heute zählt.",
     "cta": "Demo testen",
     "secondary": "Funktionen ansehen",
-    "note": "Ohne Anmeldung. Öffnet einen fertigen Demo-Account.",
+    "note": "Öffnet die Suku App auf suku.ink.",
     "shotAlt": "Das Suku Dashboard: eine Begrüßung, Fortschrittsbalken für Jahr, Monat und Woche, das Eingabefeld „Frag Suku“, fünf heute fällige Aufgaben und Zähler für aktive Projekte, laufende und überfällige Aufgaben."
   },
   "strip": {
@@ -34,7 +34,7 @@
     "projects": "Projekte",
     "calendar": "Kalender",
     "habits": "Gewohnheiten",
-    "gym": "Gym",
+    "gym": "Fitness",
     "whiteboards": "Whiteboards",
     "ai": "Suku KI",
     "line": "Alles, was du sonst auf fünf Apps verteilst."
@@ -44,13 +44,13 @@
     "titleA": "Frag Suku ",
     "titleEm": "alles.",
     "body": "Schreib so, wie du denkst. Suku legt die Aufgabe an, verschiebt den Termin, stellt die Erinnerung und merkt sich, was du letzte Woche gesagt hast.",
-    "body2": "Jeden Morgen schreibt Suku ein Daily Briefing aus deinen echten Aufgaben, Gewohnheiten und Terminen, damit du weißt, was heute zählt.",
+    "body2": "Jeden Morgen schreibt Suku ein Tagesbriefing aus deinen echten Aufgaben, Gewohnheiten und Terminen, damit du weißt, was heute zählt.",
     "cta": "Suku KI in der Demo testen",
-    "askPlaceholder": "Frag Suku…",
+    "askPlaceholder": "Suku fragen…",
     "askExample": "Leg meinen Lauf morgen auf 7 Uhr und erinnere mich um 6:45",
     "askSend": "Senden",
     "reply": "Erledigt. „Morgenlauf“ ist jetzt morgen um 07:00. Ich erinnere dich um 06:45.",
-    "briefingTitle": "Daily Briefing",
+    "briefingTitle": "Tagesbriefing",
     "briefingRegenerate": "Erstellen",
     "briefingBody": "Heute zählen drei Dinge: Das Kunden-Deck ist um 14:00 fällig, deine Lese-Gewohnheit steht bei 9 Tagen am Stück, und Donnerstag ist noch frei für Deep Work.",
     "tasksTitle": "Heute",
@@ -122,7 +122,7 @@
         "days": "Mo,Di,Mi,Do,Fr,Sa,So"
       },
       "gym": {
-        "title": "Gym",
+        "title": "Fitness",
         "body": "Erfasse Sätze, Wiederholungen und Gewicht. Suku merkt sich deine Bestleistungen.",
         "exercise": "Bankdrücken",
         "set": "Satz",
@@ -163,7 +163,7 @@
         "ago": "vor 1 Std."
       },
       "briefing": {
-        "title": "Daily Briefing",
+        "title": "Tagesbriefing",
         "body": "Eine kurze Zusammenfassung am Morgen von Suku KI, dazu ein Rückblick am Abend.",
         "morning": "Morgen-Briefing",
         "evening": "Abend-Zusammenfassung",
@@ -207,15 +207,15 @@
     "title": "Fragen",
     "titleEm": "beantwortet.",
     "q1": "Was ist Suku?",
-    "a1": "Suku ist eine persönliche App, mit der du deinen Tag organisierst. Aufgaben, Projekte, Kalender, Gewohnheiten, Gym-Workouts und Whiteboards liegen an einem Ort, und Suku KI hilft dir, den Überblick zu behalten.",
+    "a1": "Suku ist eine persönliche App, mit der du deinen Tag organisierst. Aufgaben, Projekte, Kalender, Gewohnheiten, Workouts und Whiteboards liegen an einem Ort, und Suku KI hilft dir, den Überblick zu behalten.",
     "q2": "Gibt es eine Demo?",
-    "a2": "Ja. Klick auf „Demo testen“ und Suku öffnet sich mit einem fertigen Demo-Account. Du musst dich nicht registrieren und kannst dich frei umsehen.",
+    "a2": "Ja. „Demo testen“ öffnet die Suku App auf suku.ink. Dort kannst du dich mit dem Demo-Account anmelden und dich mit Beispiel-Aufgaben, -Projekten und -Gewohnheiten umsehen. Die Demo-Daten werden beim Neuladen zurückgesetzt.",
     "q3": "Funktioniert Suku auf dem Handy?",
     "a3": "Ja. Suku ist eine installierbare Web-App. Öffne sie im Browser deines Handys, füge sie zum Homescreen hinzu, und sie verhält sich wie eine native App, inklusive Benachrichtigungen.",
     "q4": "Synchronisiert Suku mit Google Kalender?",
     "a4": "Ja. Verbinde dein Google-Konto in Suku, und deine Termine erscheinen im Kalender und im Dashboard neben deinen Aufgaben.",
     "q5": "Was macht Suku KI?",
-    "a5": "Du kannst Suku in normaler Sprache bitten, Aufgaben, Projekte und Termine anzulegen oder zu ändern, Erinnerungen zu stellen oder deine Gewohnheiten und Gym-Bestleistungen abzufragen. Außerdem schreibt Suku jeden Morgen dein Daily Briefing.",
+    "a5": "Du kannst Suku in normaler Sprache bitten, Aufgaben, Projekte und Termine anzulegen oder zu ändern, Erinnerungen zu stellen oder deine Gewohnheiten und Fitness-Bestleistungen abzufragen. Außerdem schreibt Suku jeden Morgen dein Tagesbriefing.",
     "q6": "Gibt es Suku auf Deutsch?",
     "a6": "Ja. Die ganze App, auch diese Seite, gibt es auf Englisch und Deutsch. Du kannst jederzeit über den EN/DE-Schalter wechseln."
   },

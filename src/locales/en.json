@@ -25,7 +25,7 @@
     "sub": "Tasks, projects, habits, workouts and your calendar, in one calm dashboard. With an AI that tells you what matters today.",
     "cta": "Try the demo",
     "secondary": "See features",
-    "note": "No sign-up. Opens a ready-made demo account.",
+    "note": "Opens the Suku app at suku.ink.",
     "shotAlt": "The Suku dashboard: a greeting, Year, Month and Week progress bars, the Ask Suku input, five tasks due today and counters for active projects, tasks in progress and overdue tasks."
   },
   "strip": {
@@ -209,7 +209,7 @@
     "q1": "What is Suku?",
     "a1": "Suku is a personal app for running your day. Tasks, projects, calendar, habits, gym workouts and whiteboards live in one place, and Suku AI helps you keep track of all of it.",
     "q2": "Is there a demo?",
-    "a2": "Yes. Click “Try the demo” to open Suku with a ready-made demo account. You don't need to sign up, and you can click around as much as you like.",
+    "a2": "Yes. “Try the demo” opens the Suku app at suku.ink, where you can sign in to the demo account and click around with sample tasks, projects and habits. Demo data resets when you refresh.",
     "q3": "Does it work on my phone?",
     "a3": "Yes. Suku is an installable web app. Open it in your phone's browser and add it to your home screen, and it behaves like a native app, including notifications.",
     "q4": "Does it sync with Google Calendar?",
