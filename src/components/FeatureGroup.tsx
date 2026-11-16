@@ -40,15 +40,15 @@ export function FeatureGroup({ id, ns, wide, small, captions }: Props) {
         </p>
       </header>
 
-      <div className="mt-16 grid grid-cols-1 gap-4 md:mt-20 md:grid-cols-2 md:gap-6">
+      <div className="mt-16 grid grid-cols-1 gap-4 md:mt-20 md:gap-6 lg:grid-cols-2">
         {/* Wide glow card */}
-        <article className="card card-glow reveal grid min-w-0 grid-cols-1 gap-12 p-8 md:col-span-2 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:p-20">
+        <article className="card card-glow reveal grid min-w-0 grid-cols-1 gap-8 p-6 md:p-10 lg:col-span-2 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-12">
           <CardCopy title={wide.title} body={wide.body} />
           <div className="min-w-0">{wide.ui}</div>
         </article>
 
         {small.map((c, i) => (
-          <article key={c.key} className="card reveal flex min-w-0 flex-col gap-12 p-8 md:p-12" style={{ ["--i" as string]: i + 1 }}>
+          <article key={c.key} className="card reveal flex min-w-0 flex-col gap-8 p-6 md:p-8" style={{ ["--i" as string]: i + 1 }}>
             <CardCopy title={c.title} body={c.body} />
             <div className="mt-auto min-w-0">{c.ui}</div>
           </article>

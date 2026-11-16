@@ -43,7 +43,7 @@ export function Nav() {
           <Logo />
         </a>
 
-        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a href={l.href} className="rounded-full px-4 py-2 text-sm text-ink-muted transition-colors duration-fast ease-out hover:text-ink">
@@ -53,7 +53,7 @@ export function Nav() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <LangToggle className="mr-2" />
           <a href={APP_URL} className="btn btn-ghost btn-sm">
             {t("nav.login")}
@@ -63,9 +63,13 @@ export function Nav() {
           </a>
         </div>
 
+        <div className="flex items-center gap-2 lg:hidden">
+        <a href={APP_URL} className="btn btn-accent btn-sm hidden sm:inline-flex">
+          {t("nav.demo")}
+        </a>
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-ink-muted hover:text-ink md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-ink-muted hover:text-ink"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? t("nav.close") : t("nav.menu")}
@@ -73,10 +77,11 @@ export function Nav() {
         >
           {open ? <X size={22} strokeWidth={1.5} aria-hidden /> : <Menu size={22} strokeWidth={1.5} aria-hidden />}
         </button>
+        </div>
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="container-page border-t border-line-soft pb-8 pt-4 md:hidden">
+        <div id="mobile-menu" className="container-page border-t border-line-soft pb-8 pt-4 lg:hidden">
           <ul className="flex flex-col">
             {links.map((l) => (
               <li key={l.href}>

@@ -24,7 +24,7 @@ function Item({ k, Icon, hidden }: { k: string; Icon: LucideIcon; hidden?: boole
 export function ModuleStrip() {
   const { t } = useTranslation();
   return (
-    <section id="features" aria-label={t("strip.label")} className="pt-24 md:pt-32">
+    <section id="features" aria-label={t("strip.label")} className="pt-16 md:pt-20">
       {/* Desktop: one quiet, evenly spaced row */}
       <div className="container-page reveal hidden lg:block">
         <ul className="flex items-center justify-between gap-8 px-4 lg:px-16">

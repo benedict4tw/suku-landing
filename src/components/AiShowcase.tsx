@@ -7,7 +7,7 @@ export function AiShowcase() {
   const { t } = useTranslation();
   return (
     <section id="ai" aria-labelledby="ai-title" className="container-page pt-section">
-      <div className="card card-glow reveal grid grid-cols-1 gap-20 p-8 md:p-20 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-32 lg:p-32">
+      <div className="card card-glow reveal grid grid-cols-1 gap-10 p-6 md:p-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-12 lg:p-12">
         <div className="flex min-w-0 flex-col justify-center">
           <p className="eyebrow reveal" style={{ ["--i" as string]: 1 }}>{t("ai.eyebrow")}</p>
           <h2 id="ai-title" className="reveal mt-4 text-h2 text-ink" style={{ ["--i" as string]: 2 }}>
