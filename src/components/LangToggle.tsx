@@ -13,7 +13,6 @@ export function LangToggle({ className = "" }: { className?: string }) {
             key={lng}
             type="button"
             lang={lng}
-            aria-label={lng === "en" ? "English" : "Deutsch"}
             aria-pressed={active}
             onClick={() => i18n.changeLanguage(lng)}
             className={`min-h-[32px] min-w-[40px] rounded-sm px-2 text-xs font-semibold uppercase tracking-[0.04em] transition-colors duration-fast ease-out ${

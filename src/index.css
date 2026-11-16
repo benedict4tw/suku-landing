@@ -168,11 +168,9 @@
     aspect-ratio: 16 / 9;
     transform: translate(-50%, 30%);
     background:
-      radial-gradient(closest-side, rgba(var(--accent-rgb), 0.8) 0%, rgba(var(--accent-deep-rgb), 0.55) 30%, rgba(var(--accent-deeper-rgb), 0.28) 58%, transparent 100%);
-    filter: blur(28px);
+      radial-gradient(closest-side, rgba(var(--accent-rgb), 0.78) 0%, rgba(var(--accent-rgb), 0.6) 14%, rgba(var(--accent-deep-rgb), 0.45) 32%, rgba(var(--accent-deeper-rgb), 0.26) 54%, rgba(var(--accent-deeper-rgb), 0.1) 76%, transparent 100%);
     pointer-events: none;
     animation: bloom-breathe 8s ease-in-out infinite;
-    will-change: transform, opacity;
   }
   .bloom-edge {
     position: absolute;
@@ -181,8 +179,7 @@
     width: min(1100px, 120vw);
     aspect-ratio: 5 / 2;
     transform: translate(-50%, 35%);
-    background: radial-gradient(closest-side, rgba(var(--mauve-rgb), 0.26), transparent 100%);
-    filter: blur(36px);
+    background: radial-gradient(closest-side, rgba(var(--mauve-rgb), 0.24), rgba(var(--mauve-rgb), 0.08) 60%, transparent 100%);
     pointer-events: none;
   }
 
@@ -193,15 +190,14 @@
     width: min(1560px, 140vw);
     height: 130%;
     transform: translateX(-50%);
-    background: radial-gradient(50% 40% at 50% 34%, rgba(var(--accent-rgb), 0.55) 0%, rgba(var(--accent-deep-rgb), 0.3) 40%, rgba(var(--accent-deeper-rgb), 0.14) 68%, transparent 100%);
-    filter: blur(44px);
+    background: radial-gradient(50% 40% at 50% 34%, rgba(var(--accent-rgb), 0.52) 0%, rgba(var(--accent-rgb), 0.38) 18%, rgba(var(--accent-deep-rgb), 0.26) 40%, rgba(var(--accent-deeper-rgb), 0.12) 66%, rgba(var(--accent-deeper-rgb), 0.04) 84%, transparent 100%);
     pointer-events: none;
     z-index: -1;
   }
   .bloom-card {
-    width: min(1100px, 150vw);
+    width: min(1400px, 200vw);
     aspect-ratio: 2 / 1;
-    transform: translate(-50%, 58%);
+    transform: translate(-50%, 46%);
     animation-name: bloom-breathe-card;
   }
 
@@ -265,8 +261,8 @@
   50% { opacity: 1; transform: translate(-50%, 28%) scale(1.04); }
 }
 @keyframes bloom-breathe-card {
-  0%, 100% { opacity: 0.82; transform: translate(-50%, 58%) scale(1); }
-  50% { opacity: 1; transform: translate(-50%, 55%) scale(1.04); }
+  0%, 100% { opacity: 0.85; transform: translate(-50%, 46%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, 43%) scale(1.04); }
 }
 @keyframes hero-in {
   from { opacity: 0; transform: translateY(16px); }
