@@ -1,23 +1,29 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
-export function useReveal(threshold = 0.15) {
-  const ref = useRef<HTMLElement>(null);
-
+/**
+ * Adds `.is-visible` to every `.reveal` element once it scrolls into view.
+ * Content is visible without JS (the `.no-js` class is removed in main.tsx only
+ * once this observer exists) and under prefers-reduced-motion (CSS override).
+ */
+export function useReveal(dep?: unknown) {
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const els = Array.from(document.querySelectorAll<HTMLElement>(".reveal:not(.is-visible)"));
+    if (!("IntersectionObserver" in window)) {
+      els.forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
     const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add("visible");
-          io.disconnect();
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
         }
       },
-      { threshold }
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
     );
-    io.observe(el);
+    els.forEach((el) => io.observe(el));
     return () => io.disconnect();
-  }, [threshold]);
-
-  return ref;
+  }, [dep]);
 }

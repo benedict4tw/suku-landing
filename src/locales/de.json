@@ -1,114 +1,233 @@
 {
+  "meta": {
+    "title": "Suku: dein ganzes Leben an einem Ort",
+    "description": "Aufgaben, Projekte, Gewohnheiten, Workouts und dein Kalender in einem ruhigen Dashboard, mit einer KI, die dir sagt, was heute zählt."
+  },
+  "skip": "Zum Inhalt springen",
   "nav": {
-    "tryDemo": "Demo testen"
+    "features": "Funktionen",
+    "how": "So funktioniert's",
+    "faq": "FAQ",
+    "login": "Anmelden",
+    "demo": "Demo testen",
+    "home": "Suku Startseite",
+    "language": "Sprache",
+    "menu": "Menü",
+    "close": "Menü schließen"
   },
   "hero": {
-    "badge": "Persönlicher KI Lebensassistent",
-    "line1": "Dein Leben.",
-    "line2": "Ein System auf",
-    "line3": "Autopilot.",
-    "sub": "Suku ist dein persönlicher KI-Assistent der deine Aufgaben, Projekte, Gewohnheiten, Workouts und Kalender verwaltet und immer einen Schritt vorausdenkt.",
-    "cta": "Demo testen →",
-    "watchVideo": "Video ansehen",
-    "tagline": "Gemacht für dich. Nur für dich."
+    "badgeChip": "Neu",
+    "badge": "Suku KI · Tägliche Briefings",
+    "titleA": "Dein ganzes Leben,",
+    "titleB1": "an ",
+    "titleEm": "einem",
+    "titleB2": " Ort.",
+    "sub": "Aufgaben, Projekte, Gewohnheiten, Workouts und dein Kalender in einem ruhigen Dashboard. Mit einer KI, die dir sagt, was heute zählt.",
+    "cta": "Demo testen",
+    "secondary": "Funktionen ansehen",
+    "note": "Ohne Anmeldung. Öffnet einen fertigen Demo-Account.",
+    "shotAlt": "Das Suku Dashboard: eine Begrüßung, Fortschrittsbalken für Jahr, Monat und Woche, das Eingabefeld „Frag Suku“, fünf heute fällige Aufgaben und Zähler für aktive Projekte, laufende und überfällige Aufgaben."
   },
-  "bento": {
-    "eyebrow": "Funktionen",
-    "title": "Manage dein Leben wie ein CEO.",
-    "chat": {
-      "title": "KI-Assistent",
-      "desc": "Sag Suku einfach was du brauchst.",
-      "msg1user": "Erinnere mich morgen, den Zahnarzt anzurufen",
-      "msg1ai": "Erledigt. Erinnerung für morgen 15 Uhr gesetzt ✓",
-      "msg2user": "Und füge es meinem Kalender hinzu",
-      "msg2ai": "Auch zu deinem Kalender hinzugefügt 📅"
+  "strip": {
+    "label": "Suku Module",
+    "tasks": "Aufgaben",
+    "projects": "Projekte",
+    "calendar": "Kalender",
+    "habits": "Gewohnheiten",
+    "gym": "Gym",
+    "whiteboards": "Whiteboards",
+    "ai": "Suku KI",
+    "line": "Alles, was du sonst auf fünf Apps verteilst."
+  },
+  "ai": {
+    "eyebrow": "Suku KI",
+    "titleA": "Frag Suku ",
+    "titleEm": "alles.",
+    "body": "Schreib so, wie du denkst. Suku legt die Aufgabe an, verschiebt den Termin, stellt die Erinnerung und merkt sich, was du letzte Woche gesagt hast.",
+    "body2": "Jeden Morgen schreibt Suku ein Daily Briefing aus deinen echten Aufgaben, Gewohnheiten und Terminen, damit du weißt, was heute zählt.",
+    "cta": "Suku KI in der Demo testen",
+    "askPlaceholder": "Frag Suku…",
+    "askExample": "Leg meinen Lauf morgen auf 7 Uhr und erinnere mich um 6:45",
+    "askSend": "Senden",
+    "reply": "Erledigt. „Morgenlauf“ ist jetzt morgen um 07:00. Ich erinnere dich um 06:45.",
+    "briefingTitle": "Daily Briefing",
+    "briefingRegenerate": "Erstellen",
+    "briefingBody": "Heute zählen drei Dinge: Das Kunden-Deck ist um 14:00 fällig, deine Lese-Gewohnheit steht bei 9 Tagen am Stück, und Donnerstag ist noch frei für Deep Work.",
+    "tasksTitle": "Heute",
+    "task1": "Kunden-Deck senden",
+    "task1meta": "14:00",
+    "task2": "20 Seiten lesen",
+    "task2meta": "Gewohnheit",
+    "task3": "Zahnarzt buchen",
+    "task3meta": "Erinnerung"
+  },
+  "groups": {
+    "plan": {
+      "title": "Plane",
+      "titleEm": "die Woche.",
+      "sub": "Aufgaben, Projekte und dein Kalender, Seite an Seite.",
+      "tasks": {
+        "title": "Aufgaben & Projekte",
+        "body": "Teile Großes in Aufgaben, setz Fälligkeiten und sieh zu, wie jedes Projekt vorankommt.",
+        "list": "Heute",
+        "t1": "Onboarding-Texte entwerfen",
+        "t2": "Q4-Budget prüfen",
+        "t3": "Vermieter anrufen",
+        "t4": "Laufschuhe abholen",
+        "projectName": "Website-Relaunch",
+        "projectMeta": "8 von 13 Aufgaben",
+        "project2": "Abschlussarbeit",
+        "project2Meta": "5 von 12 Aufgaben",
+        "tickHint": "Hak eine Aufgabe ab"
+      },
+      "calendar": {
+        "title": "Kalender",
+        "body": "Verbinde Google Kalender und sieh deine Termine neben deinen Aufgaben.",
+        "badge": "Google Kalender",
+        "e1": "Standup",
+        "e2": "Gym",
+        "e3": "Deep Work",
+        "e4": "Abendessen"
+      },
+      "whiteboards": {
+        "title": "Whiteboards",
+        "body": "Eine freie Fläche für Ideen, die noch in keine Liste passen.",
+        "n1": "Ziele 2027",
+        "n2": "Halbmarathon laufen",
+        "n3": "Spanisch lernen"
+      },
+      "c1": "Fälligkeiten und Prioritäten für jede Aufgabe",
+      "c2": "Projektfortschritt auf einen Blick",
+      "c3": "Google-Kalender-Termine neben deinen To-dos"
     },
-    "tasks": {
-      "title": "Aufgaben und Projekte",
-      "desc": "Alles organisiert an einem Ort.",
-      "task1": "Neuen Hero designen",
-      "task2": "Onboarding-Text schreiben",
-      "task3": "Analytics einrichten"
+    "track": {
+      "title": "Miss,",
+      "titleEm": "was zählt.",
+      "sub": "Gewohnheiten, Workouts und die Zeit selbst, ganz ruhig gemessen.",
+      "progress": {
+        "title": "Jahr, Monat, Woche",
+        "body": "Die Leiste oben in deinem Dashboard. Sie zeigt, wie viel vom Jahr, Monat und von der Woche schon vergangen ist. Diese Werte sind live für heute.",
+        "year": "Jahr",
+        "month": "Monat",
+        "week": "Woche",
+        "caption": "Berechnet für {{date}}"
+      },
+      "habits": {
+        "title": "Gewohnheiten",
+        "body": "Einmal am Tag abhaken und deine Serien am Leben halten.",
+        "h1": "Lesen",
+        "h2": "Meditieren",
+        "h3": "Kein Handy nach 22:00",
+        "streak": "{{count}} Tage am Stück",
+        "days": "Mo,Di,Mi,Do,Fr,Sa,So"
+      },
+      "gym": {
+        "title": "Gym",
+        "body": "Erfasse Sätze, Wiederholungen und Gewicht. Suku merkt sich deine Bestleistungen.",
+        "exercise": "Bankdrücken",
+        "set": "Satz",
+        "kg": "kg",
+        "reps": "Wdh.",
+        "pr": "PR"
+      },
+      "c1": "Serien für jede Gewohnheit",
+      "c2": "Bestleistungen pro Übung",
+      "c3": "Jahr, Monat und Woche im Dashboard"
     },
-    "habits": {
-      "title": "Gewohnheiten",
-      "desc": "Verfolge deinen Fortschritt täglich.",
-      "today": "Heutige Gewohnheiten",
-      "performance": "✓ Leistung: Großartig",
-      "streak": "12-Tage-Streak 🔥"
-    },
-    "gym": {
-      "title": "Gym Tracker",
-      "desc": "Sieh wie du stärker wirst.",
-      "volume": "Wöchentliches Volumen +18%"
-    },
-    "wb": {
-      "title": "Whiteboards",
-      "desc": "Denk frei. Plan visuell.",
-      "goals": "Ziele",
-      "fitness": "Fitness",
-      "career": "Karriere",
-      "learn": "Lernen",
-      "travel": "Reisen"
-    },
-    "notif": {
-      "title": "Proaktive Benachrichtigungen",
-      "desc": "Suku findet dich. Nicht andersrum.",
-      "phone": "Team-Standup in 10 Min. ⏰",
-      "item1": "Standup in 10 Min. ⏰",
-      "item2": "Morgenlauf protokolliert ✅",
-      "item3": "2 Aufgaben fällig heute 💡"
+    "focus": {
+      "title": "Fokus",
+      "titleEm": "auf heute.",
+      "sub": "Ein Bildschirm, der dir zeigt, wo du stehst.",
+      "dashboard": {
+        "title": "Dein Dashboard",
+        "body": "Was heute fällig ist, was läuft und was liegen geblieben ist, sobald du Suku öffnest.",
+        "due": "Heute fällig",
+        "projects": "Projekte",
+        "projectsSub": "aktiv",
+        "inProgress": "In Arbeit",
+        "inProgressSub": "Aufgaben",
+        "overdue": "Überfällig",
+        "overdueSub": "Aufgaben",
+        "d1": "Workshop-Folien vorbereiten",
+        "d2": "Deep Work für die Uni",
+        "more": "+3 weitere"
+      },
+      "reminders": {
+        "title": "Erinnerungen",
+        "body": "Push-Benachrichtigungen für Erinnerungen und alles, was morgen fällig ist.",
+        "n1title": "Erinnerung",
+        "n1": "Vermieter anrufen",
+        "n2title": "Morgen fällig",
+        "n2": "„Q4-Budget prüfen“ ist morgen fällig.",
+        "now": "jetzt",
+        "ago": "vor 1 Std."
+      },
+      "briefing": {
+        "title": "Daily Briefing",
+        "body": "Eine kurze Zusammenfassung am Morgen von Suku KI, dazu ein Rückblick am Abend.",
+        "morning": "Morgen-Briefing",
+        "evening": "Abend-Zusammenfassung",
+        "line": "4 Aufgaben heute, 1 überfällig. Gym um 18:00."
+      },
+      "c1": "Überfällige Aufgaben tauchen von selbst auf",
+      "c2": "Briefing am Morgen, Rückblick am Abend",
+      "c3": "Erinnerungen auf Handy und Desktop"
     }
   },
-  "taglines": {
-    "t1": "Manage dein Leben wie ein CEO.",
-    "t2": "Gemacht für dich. Nur für dich.",
-    "t3": "Dein Leben. Ein System auf Autopilot."
+  "why": {
+    "title": "Warum ",
+    "titleEm": "Suku",
+    "sub": "Gebaut für den Tag einer Person, nicht für den Workflow eines Teams.",
+    "pwa": { "title": "Installierbar wie eine App", "body": "Leg Suku auf deinen Homescreen oder ins Dock. Läuft auf Handy und Desktop." },
+    "lang": { "title": "Englisch und Deutsch", "body": "Schalte die ganze App mit einem Tipp zwischen EN und DE um." },
+    "remind": { "title": "Erinnerungen, die ankommen", "body": "Push-Benachrichtigungen für Erinnerungen und Aufgaben, die morgen fällig sind." },
+    "gcal": { "title": "Google Kalender", "body": "Verbinde deinen Kalender und sieh Termine neben deinen Aufgaben." },
+    "ai": { "title": "KI eingebaut", "body": "Suku KI arbeitet mit deinen echten Daten: Aufgaben, Projekte, Gewohnheiten und Workouts." },
+    "fast": { "title": "Schnell und fokussiert", "body": "Eine ruhige, dunkle Oberfläche, die nicht zwischen dir und deinem Tag steht." }
   },
-  "how": {
-    "eyebrow": "So funktioniert es",
-    "title": "Deine KI. Deine Regeln.",
-    "step1title": "Sag es Suku",
-    "step1desc": "Tippe oder sprich alles: eine Erinnerung setzen, ein Workout protokollieren, deine Woche planen. Natürliche Sprache, immer.",
-    "step2title": "Suku handelt",
-    "step2desc": "Erstellt sofort Aufgaben, setzt Erinnerungen, aktualisiert Gewohnheiten und plant deinen Zeitplan. Keine zusätzlichen Schritte nötig.",
-    "step3title": "Du wirst benachrichtigt",
-    "step3desc": "Erhalte smarte, proaktive Benachrichtigungen genau zum richtigen Zeitpunkt. Suku denkt voraus, damit du es nicht musst."
-  },
-  "demoSection": {
-    "eyebrow": "Live erleben",
-    "title": "Sieh Suku in Aktion.",
-    "cta": "Selbst ausprobieren →"
-  },
-  "builtby": {
-    "prefix": "Ein Projekt von"
+  "faq": {
+    "title": "Fragen",
+    "titleEm": "beantwortet.",
+    "q1": "Was ist Suku?",
+    "a1": "Suku ist eine persönliche App, mit der du deinen Tag organisierst. Aufgaben, Projekte, Kalender, Gewohnheiten, Gym-Workouts und Whiteboards liegen an einem Ort, und Suku KI hilft dir, den Überblick zu behalten.",
+    "q2": "Gibt es eine Demo?",
+    "a2": "Ja. Klick auf „Demo testen“ und Suku öffnet sich mit einem fertigen Demo-Account. Du musst dich nicht registrieren und kannst dich frei umsehen.",
+    "q3": "Funktioniert Suku auf dem Handy?",
+    "a3": "Ja. Suku ist eine installierbare Web-App. Öffne sie im Browser deines Handys, füge sie zum Homescreen hinzu, und sie verhält sich wie eine native App, inklusive Benachrichtigungen.",
+    "q4": "Synchronisiert Suku mit Google Kalender?",
+    "a4": "Ja. Verbinde dein Google-Konto in Suku, und deine Termine erscheinen im Kalender und im Dashboard neben deinen Aufgaben.",
+    "q5": "Was macht Suku KI?",
+    "a5": "Du kannst Suku in normaler Sprache bitten, Aufgaben, Projekte und Termine anzulegen oder zu ändern, Erinnerungen zu stellen oder deine Gewohnheiten und Gym-Bestleistungen abzufragen. Außerdem schreibt Suku jeden Morgen dein Daily Briefing.",
+    "q6": "Gibt es Suku auf Deutsch?",
+    "a6": "Ja. Die ganze App, auch diese Seite, gibt es auf Englisch und Deutsch. Du kannst jederzeit über den EN/DE-Schalter wechseln."
   },
   "cta": {
-    "title": "Bereit dein Leben zu managen?",
-    "sub": "Teste die Demo. Kein Account nötig.",
-    "button": "Demo testen →",
-    "domain": "suku.live"
+    "titleA": "Weniger planen. ",
+    "titleEm": "Mehr",
+    "titleB": " leben.",
+    "sub": "Öffne die Demo und sieh deinen Tag so, wie Suku ihn sieht.",
+    "button": "Demo testen"
   },
   "footer": {
-    "builtby": "Ein Projekt von"
+    "tagline": "Dein ganzes Leben an einem ruhigen Ort.",
+    "product": "Produkt",
+    "features": "Funktionen",
+    "demo": "Demo",
+    "login": "Anmelden",
+    "legal": "Rechtliches",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "copyright": "© 2026 Suku"
   },
-  "access": {
-    "back": "← Zurück",
-    "successTitle": "Du bist auf der Liste.",
-    "successSub": "Ich melde mich bald. Suku ist für Menschen gebaut, die wirklich die Kontrolle über ihr Leben übernehmen wollen.",
-    "successCta": "Zurück zur Startseite",
-    "badge": "Früher Zugang",
-    "title": "Vollzugang zu Suku erhalten.",
-    "sub": "Fülle das Formular aus und ich melde mich direkt bei dir.",
-    "nameLabel": "Dein Name",
-    "namePlaceholder": "Kevin",
-    "emailLabel": "Deine E-Mail",
-    "emailPlaceholder": "kevin@beispiel.de",
-    "reasonLabel": "Wofür möchtest du Suku nutzen?",
-    "reasonPlaceholder": "Aufgaben verwalten, bessere Gewohnheiten aufbauen, Training verfolgen...",
-    "error": "Etwas ist schiefgelaufen. Versuche es später erneut.",
-    "sending": "Wird gesendet…",
-    "submit": "Zugang anfragen →",
-    "note": "Kein Spam. Keine Newsletter. Nur eine Antwort von mir."
+  "legal": {
+    "back": "Zurück zur Startseite",
+    "impressumTitle": "Impressum",
+    "privacyTitle": "Datenschutz",
+    "placeholder": "Diese Seite wird gerade vorbereitet. Die gesetzlich vorgeschriebenen Angaben werden hier in Kürze veröffentlicht.",
+    "contact": "Fragen in der Zwischenzeit? Öffne Suku und kontaktiere uns direkt in der App."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden.",
+    "back": "Zurück zur Startseite"
   }
 }

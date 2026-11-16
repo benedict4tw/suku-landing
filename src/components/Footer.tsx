@@ -1,12 +1,39 @@
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { Logo } from "./Logo";
+import { APP_URL } from "../lib/links";
+
 export function Footer() {
+  const { t } = useTranslation();
+  const linkCls = "text-sm text-ink-muted transition-colors duration-fast ease-out hover:text-ink";
   return (
-    <footer className="px-6 py-8" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <img src="/SUKU-Logov1.png" style={{ width: 22, height: 22, objectFit: "contain" }} alt="Suku" />
-          <span className="font-bold text-white text-base">Suku</span>
+    <footer className="container-page mt-section pb-8">
+      <div className="grid gap-9 pb-9 md:grid-cols-[minmax(0,6fr)_minmax(0,3fr)_minmax(0,3fr)]">
+        <div>
+          <a href="/" aria-label={t("nav.home")} className="inline-block rounded-sm">
+            <Logo />
+          </a>
+          <p className="mt-4 max-w-[36ch] text-sm text-ink-muted">{t("footer.tagline")}</p>
         </div>
-        <p className="text-sm" style={{ color: "rgba(255,255,255,0.2)" }}>2026</p>
+        <nav aria-labelledby="f-product">
+          <h2 id="f-product" className="eyebrow">{t("footer.product")}</h2>
+          <ul className="mt-4 space-y-3">
+            <li><a href="/#features" className={linkCls}>{t("footer.features")}</a></li>
+            <li><a href={APP_URL} className={linkCls}>{t("footer.demo")}</a></li>
+            <li><a href={APP_URL} className={linkCls}>{t("footer.login")}</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="f-legal">
+          <h2 id="f-legal" className="eyebrow">{t("footer.legal")}</h2>
+          <ul className="mt-4 space-y-3">
+            <li><Link to="/impressum" className={linkCls}>{t("footer.impressum")}</Link></li>
+            <li><Link to="/datenschutz" className={linkCls}>{t("footer.privacy")}</Link></li>
+          </ul>
+        </nav>
+      </div>
+      <div className="flex items-center justify-between gap-4 border-t border-line-soft pt-6">
+        <p className="text-xs text-ink-subtle">{t("footer.copyright")}</p>
+        <p className="text-xs text-ink-subtle">suku.live</p>
       </div>
     </footer>
   );

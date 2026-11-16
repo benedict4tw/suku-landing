@@ -1,18 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/SUKU-Logov1.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suku — Personal AI Life OS</title>
-    <meta name="description" content="Suku is your personal AI assistant that manages your tasks, projects, habits, workouts, and calendar — and thinks ahead so you don't have to." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet" />
-    <link href="https://api.fontshare.com/v2/css?f[]=chillax@700&display=swap" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Suku: your whole life, in one place</title>
+    <meta name="description" content="Tasks, projects, habits, workouts and your calendar in one calm dashboard, with an AI that tells you what matters today." />
+    <meta name="theme-color" content="#100E0C" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="canonical" href="https://www.suku.live/" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Suku" />
+    <meta property="og:url" content="https://www.suku.live/" />
+    <meta property="og:title" content="Suku: your whole life, in one place" />
+    <meta property="og:description" content="Tasks, projects, habits, workouts and your calendar in one calm dashboard, with an AI that tells you what matters today." />
+    <meta property="og:image" content="https://www.suku.live/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Suku: Your whole life, in one place." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Suku: your whole life, in one place" />
+    <meta name="twitter:description" content="Tasks, projects, habits, workouts and your calendar in one calm dashboard, with an AI that tells you what matters today." />
+    <meta name="twitter:image" content="https://www.suku.live/og.png" />
+
+    <link rel="preload" href="/fonts/fraunces-opsz.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="image" type="image/avif" media="(min-width: 768px)"
+      imagesrcset="/img/hero-960.avif 960w, /img/hero-1440.avif 1440w, /img/hero-2160.avif 2160w"
+      imagesizes="(min-width: 1184px) 1104px, calc(100vw - 80px)" fetchpriority="high" />
+    <link rel="preload" as="image" type="image/avif" media="(max-width: 767px)"
+      imagesrcset="/img/hero-m-640.avif 640w, /img/hero-m-1080.avif 1080w"
+      imagesizes="calc(100vw - 32px)" fetchpriority="high" />
+
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Suku","applicationCategory":"ProductivityApplication","operatingSystem":"Web, iOS, Android, macOS, Windows","url":"https://www.suku.live/","description":"A personal app for tasks, projects, habits, workouts, calendar and whiteboards, with Suku AI and a Daily Briefing."}
+    </script>
+    <style>
+      /* Paint the CI background before CSS loads: no white flash */
+      html, body { background: #100E0C; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding:48px 24px;font-family:system-ui,sans-serif;color:#f4efe6;max-width:640px;margin:auto">
+        <h1 style="font-family:Georgia,serif">Suku: your whole life, in one place.</h1>
+        <p style="color:#a39686">Tasks, projects, habits, workouts and your calendar, in one calm dashboard. With an AI that tells you what matters today.</p>
+        <p><a href="https://suku.ink" style="color:#9084f5">Try the demo</a></p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
