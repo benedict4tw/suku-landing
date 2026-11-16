@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { useTranslation } from "react-i18next";
 import { Nav } from "./components/Nav";
@@ -9,6 +9,21 @@ import { Legal, NotFound, ToApp } from "./pages/Legal";
 
 function DocumentLang() {
   const { t, i18n } = useTranslation();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // Per-route canonical (index.html ships the homepage one)
+    const known = ["/", "/impressum", "/datenschutz"];
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", `https://www.suku.live${known.includes(pathname) ? pathname : "/"}`);
+    let robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (!known.includes(pathname)) {
+      if (!robots) {
+        robots = document.createElement("meta");
+        robots.name = "robots";
+        document.head.appendChild(robots);
+      }
+      robots.content = "noindex";
+    } else robots?.remove();
+  }, [pathname]);
   useEffect(() => {
     const lng = i18n.resolvedLanguage === "de" ? "de" : "en";
     document.documentElement.lang = lng;
