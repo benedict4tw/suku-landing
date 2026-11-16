@@ -15,7 +15,7 @@ export function AiShowcase() {
           </h2>
           <p className="reveal mt-8 max-w-[46ch] text-lead text-ink-muted" style={{ ["--i" as string]: 3 }}>{t("ai.body")}</p>
           <p className="reveal mt-4 max-w-[46ch] text-base text-ink-muted" style={{ ["--i" as string]: 4 }}>{t("ai.body2")}</p>
-          <a href={APP_URL} className="link-accent reveal mt-12 inline-flex items-center gap-2 self-start text-sm" style={{ ["--i" as string]: 5 }}>
+          <a href={APP_URL} className="link-accent reveal mt-6 inline-flex min-h-[44px] items-center gap-2 self-start text-sm" style={{ ["--i" as string]: 5 }}>
             {t("ai.cta")}
           </a>
         </div>
