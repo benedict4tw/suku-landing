@@ -41,10 +41,18 @@ export function NotFound() {
   );
 }
 
-/** Old routes from the previous site (/demo, /access) now hand off to the app. */
+/** Old /demo route from the previous site hands off to the app. */
 export function ToApp() {
   useEffect(() => {
     window.location.replace("https://suku.ink");
+  }, []);
+  return null;
+}
+
+/** Old /access route: jump to the access request on the landing page. */
+export function ToAccess() {
+  useEffect(() => {
+    window.location.replace("/#access");
   }, []);
   return null;
 }

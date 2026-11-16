@@ -58,41 +58,41 @@ export function Hero() {
       <div className="container-page relative mt-20 md:mt-32">
         {/* Bloom spilling behind the frame */}
         <div aria-hidden className="bloom-frame" />
-        <div className="hero-shot-in relative mx-auto h-[clamp(240px,58vw,600px)] max-w-[1120px] overflow-hidden md:h-[clamp(360px,46vw,640px)]">
+        <div className="hero-shot-in relative mx-auto h-[clamp(150px,40vw,600px)] max-w-[1120px] overflow-hidden md:h-[clamp(280px,33vw,480px)]">
           <div className="frame rounded-b-none border-b-0 pb-0">
             <div className="frame-inner rounded-b-none border-b-0">
               <picture>
                 <source
                   media="(max-width: 767px)"
                   type="image/avif"
-                  srcSet="/img/hero-m-640.avif 640w, /img/hero-m-1080.avif 1080w"
+                  srcSet="/img/demo-m-640.avif 640w, /img/demo-m-1080.avif 1080w"
                   sizes="calc(100vw - 32px)"
                   width={1080}
-                  height={567}
+                  height={458}
                 />
                 <source
                   media="(max-width: 767px)"
                   type="image/webp"
-                  srcSet="/img/hero-m-640.webp 640w, /img/hero-m-1080.webp 1080w"
+                  srcSet="/img/demo-m-640.webp 640w, /img/demo-m-1080.webp 1080w"
                   sizes="calc(100vw - 32px)"
                   width={1080}
-                  height={567}
+                  height={458}
                 />
                 <source
                   type="image/avif"
-                  srcSet="/img/hero-960.avif 960w, /img/hero-1440.avif 1440w, /img/hero-2160.avif 2160w"
+                  srcSet="/img/demo-960.avif 960w, /img/demo-1440.avif 1440w, /img/demo-2160.avif 2160w"
                   sizes="(min-width: 1184px) 1104px, calc(100vw - 80px)"
                 />
                 <source
                   type="image/webp"
-                  srcSet="/img/hero-960.webp 960w, /img/hero-1440.webp 1440w, /img/hero-2160.webp 2160w"
+                  srcSet="/img/demo-960.webp 960w, /img/demo-1440.webp 1440w, /img/demo-2160.webp 2160w"
                   sizes="(min-width: 1184px) 1104px, calc(100vw - 80px)"
                 />
                 <img
-                  src="/img/hero-1440.webp"
+                  src="/img/demo-1440.webp"
                   alt={t("hero.shotAlt")}
                   width={1440}
-                  height={898}
+                  height={736}
                   fetchPriority="high"
                   decoding="async"
                   className="block h-auto w-full"

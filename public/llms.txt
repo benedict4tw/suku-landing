@@ -2,6 +2,6 @@
 
 > Suku is a personal life OS: tasks, projects, calendar (Google Calendar sync), habits, gym tracking, whiteboards and Suku AI (Ask Suku, Daily Briefing) in one calm dashboard. Installable web app, English and German.
 
-- [App](https://suku.ink): sign in or try the demo
+- [Demo](https://suku.ink): try the Suku demo. Suku is a non-commercial personal project; access on request.
 - [Impressum](https://www.suku.live/impressum)
 - [Datenschutz](https://www.suku.live/datenschutz)

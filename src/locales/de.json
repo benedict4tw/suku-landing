@@ -8,7 +8,6 @@
     "features": "Funktionen",
     "how": "So funktioniert's",
     "faq": "FAQ",
-    "login": "Anmelden",
     "demo": "Demo testen",
     "home": "Suku Startseite",
     "language": "Sprache",
@@ -25,8 +24,8 @@
     "sub": "Aufgaben, Projekte, Gewohnheiten, Workouts und dein Kalender in einem ruhigen Dashboard. Mit einer KI, die dir sagt, was heute zählt.",
     "cta": "Demo testen",
     "secondary": "Funktionen ansehen",
-    "note": "Öffnet die Suku App auf suku.ink.",
-    "shotAlt": "Das Suku Dashboard: eine Begrüßung, Fortschrittsbalken für Jahr, Monat und Woche, das Eingabefeld „Frag Suku“, fünf heute fällige Aufgaben und Zähler für aktive Projekte, laufende und überfällige Aufgaben."
+    "note": "Öffnet die Suku Demo auf suku.ink. Ohne Registrierung.",
+    "shotAlt": "Das Suku Dashboard des Demo-Accounts: „Good morning, Kevin“, Fortschrittsbalken für Jahr, Monat und Woche, das Eingabefeld „Frag Suku“, drei heute fällige Aufgaben und Zähler für aktive Projekte, laufende und überfällige Aufgaben."
   },
   "strip": {
     "label": "Suku Module",
@@ -52,7 +51,7 @@
     "reply": "Erledigt. „Morgenlauf“ ist jetzt morgen um 07:00. Ich erinnere dich um 06:45.",
     "briefingTitle": "Tagesbriefing",
     "briefingRegenerate": "Erstellen",
-    "briefingBody": "Heute zählen drei Dinge: Das Kunden-Deck ist um 14:00 fällig, deine Lese-Gewohnheit steht bei 9 Tagen am Stück, und Donnerstag ist noch frei für Deep Work.",
+    "briefingBody": "Heute zählen drei Dinge: Das Kunden-Deck ist um 14:00 fällig, deine Lese-Gewohnheit steht bei 9 Tagen am Stück, und Donnerstag ist noch frei für deine Wochenplanung.",
     "tasksTitle": "Heute",
     "task1": "Kunden-Deck senden",
     "task1meta": "14:00",
@@ -86,7 +85,7 @@
         "badge": "Google Kalender",
         "e1": "Standup",
         "e2": "Gym",
-        "e3": "Deep Work",
+        "e3": "Planung",
         "e4": "Abendessen"
       },
       "whiteboards": {
@@ -148,9 +147,9 @@
         "inProgressSub": "Aufgaben",
         "overdue": "Überfällig",
         "overdueSub": "Aufgaben",
-        "d1": "Workshop-Folien vorbereiten",
-        "d2": "Deep Work für die Uni",
-        "more": "+3 weitere"
+        "d1": "Morgen-Workout",
+        "d2": "Wochenplanung",
+        "more": "+1 weitere"
       },
       "reminders": {
         "title": "Erinnerungen",
@@ -209,7 +208,7 @@
     "q1": "Was ist Suku?",
     "a1": "Suku ist eine persönliche App, mit der du deinen Tag organisierst. Aufgaben, Projekte, Kalender, Gewohnheiten, Workouts und Whiteboards liegen an einem Ort, und Suku KI hilft dir, den Überblick zu behalten.",
     "q2": "Gibt es eine Demo?",
-    "a2": "Ja. „Demo testen“ öffnet die Suku App auf suku.ink. Dort kannst du dich mit dem Demo-Account anmelden und dich mit Beispiel-Aufgaben, -Projekten und -Gewohnheiten umsehen. Die Demo-Daten werden beim Neuladen zurückgesetzt.",
+    "a2": "Ja. „Demo testen“ öffnet die Suku App auf suku.ink. Mit dem Demo-Account kannst du dich dort mit Beispiel-Aufgaben, -Projekten und -Gewohnheiten umsehen. Eine Registrierung gibt es nicht. Die Demo-Daten werden beim Neuladen zurückgesetzt.",
     "q3": "Funktioniert Suku auf dem Handy?",
     "a3": "Ja. Suku ist eine installierbare Web-App. Öffne sie im Browser deines Handys, füge sie zum Homescreen hinzu, und sie verhält sich wie eine native App, inklusive Benachrichtigungen.",
     "q4": "Synchronisiert Suku mit Google Kalender?",
@@ -224,19 +223,21 @@
     "titleEm": "Mehr",
     "titleB": " leben.",
     "sub": "Öffne die Demo und sieh deinen Tag so, wie Suku ihn sieht.",
-    "button": "Demo testen"
+    "button": "Demo testen",
+    "access": "Zugang anfragen",
+    "accessNote": "Du möchtest einen eigenen Account? Frag per E-Mail."
   },
   "footer": {
     "tagline": "Dein ganzes Leben an einem ruhigen Ort.",
     "product": "Produkt",
     "features": "Funktionen",
     "demo": "Demo",
-    "login": "Anmelden",
     "legal": "Rechtliches",
     "impressum": "Impressum",
     "privacy": "Datenschutz",
     "copyright": "© 2026 Suku",
-    "builtBy": "Ein Projekt von"
+    "access": "Zugang anfragen",
+    "note": "Suku ist ein nicht-kommerzielles Privatprojekt. Keine Registrierung, keine Zahlungen. Zugang auf Anfrage."
   },
   "legal": {
     "back": "Zurück zur Startseite",
@@ -248,5 +249,9 @@
   "notFound": {
     "title": "Seite nicht gefunden.",
     "back": "Zurück zur Startseite"
+  },
+  "access": {
+    "subject": "Suku – Zugangsanfrage",
+    "body": "Hallo Benedict,\n\nich hätte gern Zugang zu Suku.\n\nName: …\nWofür ich Suku nutzen möchte: …\n\nDanke!"
   }
 }

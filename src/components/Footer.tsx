@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Logo } from "./Logo";
 import { APP_URL } from "../lib/links";
+import { RequestAccessLink } from "./RequestAccess";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ export function Footer() {
           <ul className="mt-3 space-y-1">
             <li><a href="/#features" className={linkCls}>{t("footer.features")}</a></li>
             <li><a href={APP_URL} className={linkCls}>{t("footer.demo")}</a></li>
-            <li><a href={APP_URL} className={linkCls}>{t("footer.login")}</a></li>
+            <li><RequestAccessLink className={linkCls}>{t("footer.access")}</RequestAccessLink></li>
           </ul>
         </nav>
         <nav aria-labelledby="f-legal">
@@ -31,11 +32,9 @@ export function Footer() {
           </ul>
         </nav>
       </div>
-      <div className="flex items-center justify-between gap-4 border-t border-line-soft pt-8">
-        <p className="text-xs text-ink-subtle">{t("footer.copyright")}</p>
-        <p className="text-xs text-ink-subtle">
-          {t("footer.builtBy")} <span className="text-ink-muted">Benedict Donkor</span>
-        </p>
+      <div className="flex flex-col gap-3 border-t border-line-soft pt-8 md:flex-row md:items-center md:justify-between md:gap-8">
+        <p className="max-w-[62ch] text-xs text-ink-subtle">{t("footer.note")}</p>
+        <p className="shrink-0 text-xs text-ink-subtle">{t("footer.copyright")}</p>
       </div>
     </footer>
   );

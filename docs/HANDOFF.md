@@ -1,7 +1,7 @@
 # Handoff Spec: suku.live landing
 
 ## Overview
-The marketing page for Suku. Its single job is to explain the product and send people to the app at **https://suku.ink** with the "Try the demo" CTA. It shares a CI with the app, so the jump from landing to app should not feel like a design break.
+The marketing page for Suku. Its single job is to explain the product and send people to the demo at **https://suku.ink** ("Try the demo"). There is no login or sign-up on the page; own accounts are requested by email ("Request access", a prefilled `mailto:` whose address is assembled at runtime in `src/lib/access.ts`, so it never appears in the HTML). It shares a CI with the app, so the jump from landing to app should not feel like a design break.
 
 Stack: Vite + React 19 + TypeScript + Tailwind 3 + i18next. The pages are prerendered to static HTML at build time and then hydrated. Deployed on Vercel (project `suku-landing`).
 
@@ -38,7 +38,8 @@ All tokens live in `src/styles/tokens.css` and are mapped in `tailwind.config.js
 | Component | File | Notes |
 |---|---|---|
 | Nav | `components/Nav.tsx` | Fixed header. Below `lg`: menu button plus a sheet (and a "Try the demo" button from `sm`). Escape closes the sheet. |
-| Hero | `components/Hero.tsx` | Grid and nodes (`.hero-grid`, `.hero-grid-nodes`), blooms (`.bloom`, `.bloom-edge`, `.bloom-frame`), framed `<picture>` (separate mobile crop below 768px) |
+| Hero | `components/Hero.tsx` | Grid and nodes (`.hero-grid`, `.hero-grid-nodes`), blooms (`.bloom`, `.bloom-edge`, `.bloom-frame`), framed `<picture>` of the demo account (`/img/demo-*`, from `suku-dashboard-demo.png`; separate mobile crop below 768px) |
+| RequestAccessLink | `components/RequestAccess.tsx` | Closing CTA (next to "Try the demo") and footer. EN/DE subject and body from `access.*` in the locales |
 | ModuleStrip | `components/ModuleStrip.tsx` | Static row from `lg`; marquee below (a duplicate set marked `aria-hidden`) |
 | AiShowcase | `components/AiShowcase.tsx` | `.card-glow` with the AI fragments |
 | FeatureGroup | `components/FeatureGroup.tsx` | Title, sub, bento (wide glow card plus two cards), three captions. Configured in `FeatureGroups.tsx` |
@@ -91,7 +92,7 @@ All tokens live in `src/styles/tokens.css` and are mapped in `tailwind.config.js
 - `main.tsx` hydrates when the prerendered route and language (`data-prerendered`, `data-lang`) match the visitor; otherwise it renders fresh.
 
 ## Accessibility notes
-- Focus order: skip link → logo → nav → EN/DE → Log in → Try the demo → hero badge → hero CTAs → AI link → task checkboxes → FAQ → closing CTA → footer.
+- Focus order: skip link → logo → nav → EN/DE → Try the demo → hero badge → hero CTAs → AI link → task checkboxes → FAQ → closing CTA (Try the demo, Request access) → footer.
 - Landmarks: `header`/`nav` (labelled), `main#main`, labelled `section`s, `footer` with labelled navs.
 - Progress bars: `role="progressbar"` with value and label. Identity never depends on color alone (the mauve and blue fail colorblind separation, so each bar has its text label).
 - Verified: axe 0 violations (EN, DE, mobile); text contrast at least 4.5:1 measured against the rendered glow.

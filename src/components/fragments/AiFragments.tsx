@@ -75,16 +75,16 @@ export function TodayRows() {
 export function StatTiles() {
   const { t } = useTranslation();
   const strip = [
-    { label: t("groups.focus.dashboard.projects"), sub: t("groups.focus.dashboard.projectsSub"), value: 6 },
-    { label: t("groups.focus.dashboard.inProgress"), sub: t("groups.focus.dashboard.inProgressSub"), value: 0 },
-    { label: t("groups.focus.dashboard.overdue"), sub: t("groups.focus.dashboard.overdueSub"), value: 6, danger: true },
+    { label: t("groups.focus.dashboard.projects"), sub: t("groups.focus.dashboard.projectsSub"), value: 3 },
+    { label: t("groups.focus.dashboard.inProgress"), sub: t("groups.focus.dashboard.inProgressSub"), value: 2 },
+    { label: t("groups.focus.dashboard.overdue"), sub: t("groups.focus.dashboard.overdueSub"), value: 2, danger: true },
   ];
   return (
     <div data-ui className="grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
       <div className="flex flex-col rounded-lg border border-line bg-surface-2 p-5">
         <div className="mb-4 flex items-baseline justify-between">
           <span className="text-eyebrow uppercase text-ink-subtle">{t("groups.focus.dashboard.due")}</span>
-          <span className="font-mono text-stat font-medium tabular-nums text-ink">05</span>
+          <span className="font-mono text-stat font-medium tabular-nums text-ink">03</span>
         </div>
         <ul>
           {["d1", "d2"].map((k, i) => (

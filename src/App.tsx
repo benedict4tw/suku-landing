@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { Landing } from "./pages/Landing";
-import { Legal, NotFound, ToApp } from "./pages/Legal";
+import { Legal, NotFound, ToApp, ToAccess } from "./pages/Legal";
 
 function DocumentLang() {
   const { t, i18n } = useTranslation();
@@ -51,7 +51,7 @@ export default function App() {
           <Route path="/impressum" element={<Legal kind="impressum" />} />
           <Route path="/datenschutz" element={<Legal kind="privacy" />} />
           <Route path="/demo" element={<ToApp />} />
-          <Route path="/access" element={<ToApp />} />
+          <Route path="/access" element={<ToAccess />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

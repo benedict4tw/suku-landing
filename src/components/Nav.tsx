@@ -55,9 +55,6 @@ export function Nav() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <LangToggle className="mr-2" />
-          <a href={APP_URL} className="btn btn-ghost btn-sm">
-            {t("nav.login")}
-          </a>
           <a href={APP_URL} className="btn btn-accent btn-sm">
             {t("nav.demo")}
           </a>
@@ -97,14 +94,9 @@ export function Nav() {
           </ul>
           <div className="mt-8 flex items-center justify-between gap-4">
             <LangToggle />
-            <div className="flex items-center gap-2">
-              <a href={APP_URL} className="btn btn-ghost btn-sm">
-                {t("nav.login")}
-              </a>
-              <a href={APP_URL} className="btn btn-accent btn-sm">
-                {t("nav.demo")}
-              </a>
-            </div>
+            <a href={APP_URL} className="btn btn-accent btn-sm">
+              {t("nav.demo")}
+            </a>
           </div>
         </div>
       )}

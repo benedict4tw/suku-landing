@@ -8,7 +8,6 @@
     "features": "Features",
     "how": "How it works",
     "faq": "FAQ",
-    "login": "Log in",
     "demo": "Try the demo",
     "home": "Suku home",
     "language": "Language",
@@ -25,8 +24,8 @@
     "sub": "Tasks, projects, habits, workouts and your calendar, in one calm dashboard. With an AI that tells you what matters today.",
     "cta": "Try the demo",
     "secondary": "See features",
-    "note": "Opens the Suku app at suku.ink.",
-    "shotAlt": "The Suku dashboard: a greeting, Year, Month and Week progress bars, the Ask Suku input, five tasks due today and counters for active projects, tasks in progress and overdue tasks."
+    "note": "Opens the Suku demo at suku.ink. No sign-up.",
+    "shotAlt": "The Suku dashboard of the demo account: “Good morning, Kevin”, Year, Month and Week progress bars, the Ask Suku input, three tasks due today and counters for active projects, tasks in progress and overdue tasks."
   },
   "strip": {
     "label": "Suku modules",
@@ -52,7 +51,7 @@
     "reply": "Done. “Morning run” is now at 07:00 tomorrow. I’ll remind you at 06:45.",
     "briefingTitle": "Daily Briefing",
     "briefingRegenerate": "Generate",
-    "briefingBody": "Three things matter today: the client deck is due at 14:00, your reading habit is on a 9-day streak, and Thursday is still free for deep work.",
+    "briefingBody": "Three things matter today: the client deck is due at 14:00, your reading habit is on a 9-day streak, and Thursday is still free for your weekly planning.",
     "tasksTitle": "Today",
     "task1": "Send client deck",
     "task1meta": "14:00",
@@ -86,7 +85,7 @@
         "badge": "Google Calendar",
         "e1": "Standup",
         "e2": "Gym",
-        "e3": "Deep work",
+        "e3": "Planning",
         "e4": "Dinner"
       },
       "whiteboards": {
@@ -148,9 +147,9 @@
         "inProgressSub": "tasks",
         "overdue": "Overdue",
         "overdueSub": "tasks",
-        "d1": "Prepare workshop slides",
-        "d2": "Deep work for uni",
-        "more": "+3 more"
+        "d1": "Morning workout",
+        "d2": "Weekly planning session",
+        "more": "+1 more"
       },
       "reminders": {
         "title": "Reminders",
@@ -209,7 +208,7 @@
     "q1": "What is Suku?",
     "a1": "Suku is a personal app for running your day. Tasks, projects, calendar, habits, gym workouts and whiteboards live in one place, and Suku AI helps you keep track of all of it.",
     "q2": "Is there a demo?",
-    "a2": "Yes. “Try the demo” opens the Suku app at suku.ink, where you can sign in to the demo account and click around with sample tasks, projects and habits. Demo data resets when you refresh.",
+    "a2": "Yes. “Try the demo” opens the Suku app at suku.ink, where the demo account lets you click around with sample tasks, projects and habits. There’s no sign-up. Demo data resets when you refresh.",
     "q3": "Does it work on my phone?",
     "a3": "Yes. Suku is an installable web app. Open it in your phone's browser and add it to your home screen, and it behaves like a native app, including notifications.",
     "q4": "Does it sync with Google Calendar?",
@@ -224,19 +223,21 @@
     "titleEm": "Live",
     "titleB": " more.",
     "sub": "Open the demo and see your day the way Suku sees it.",
-    "button": "Try the demo"
+    "button": "Try the demo",
+    "access": "Request access",
+    "accessNote": "Want your own account? Ask by email."
   },
   "footer": {
     "tagline": "Your whole life, in one calm place.",
     "product": "Product",
     "features": "Features",
     "demo": "Demo",
-    "login": "Log in",
     "legal": "Legal",
     "impressum": "Impressum",
     "privacy": "Datenschutz",
     "copyright": "© 2026 Suku",
-    "builtBy": "A project by"
+    "access": "Request access",
+    "note": "Suku is a non-commercial personal project. No sign-ups, no payments. Access on request."
   },
   "legal": {
     "back": "Back to home",
@@ -248,5 +249,9 @@
   "notFound": {
     "title": "Page not found.",
     "back": "Back to home"
+  },
+  "access": {
+    "subject": "Suku – Access request",
+    "body": "Hi Benedict,\n\nI'd like access to Suku.\n\nName: …\nWhat I'd use it for: …\n\nThanks!"
   }
 }
