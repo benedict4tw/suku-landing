@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { ArrowRight } from "lucide-react";
 import { APP_URL } from "../lib/links";
 
 export function Hero() {
@@ -23,7 +22,6 @@ export function Hero() {
           <span className="rounded-full bg-accent-fill px-2 py-[2px] text-xs font-semibold text-accent-on">{t("hero.badgeChip")}</span>
           <span className="sr-only">: </span>
           <span>{t("hero.badge")}</span>
-          <ArrowRight size={14} strokeWidth={1.5} aria-hidden className="text-ink-subtle transition-transform duration-fast ease-out [@media(hover:hover)]:group-hover:translate-x-[2px]" />
         </a>
 
         <h1
@@ -46,7 +44,6 @@ export function Hero() {
         <div className="hero-in mt-12 flex flex-col items-center gap-3 sm:flex-row" style={{ ["--i" as string]: 3 }}>
           <a href={APP_URL} className="btn btn-paper">
             {t("hero.cta")}
-            <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
           </a>
           <a href="#features" className="btn btn-ghost">
             {t("hero.secondary")}

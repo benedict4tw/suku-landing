@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { ArrowRight } from "lucide-react";
 import { APP_URL } from "../lib/links";
 
 export function ClosingCta() {
@@ -21,7 +20,6 @@ export function ClosingCta() {
         </p>
         <a href={APP_URL} className="btn btn-paper reveal mt-12" style={{ ["--i" as string]: 3 }}>
           {t("cta.button")}
-          <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
         </a>
       </div>
     </section>

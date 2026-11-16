@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { ArrowRight } from "lucide-react";
 import { APP_URL } from "../lib/links";
 import { AskSukuInput, AiReply, BriefingCard, TodayRows } from "./fragments/AiFragments";
 
@@ -18,7 +17,6 @@ export function AiShowcase() {
           <p className="reveal mt-4 max-w-[46ch] text-base text-ink-muted" style={{ ["--i" as string]: 4 }}>{t("ai.body2")}</p>
           <a href={APP_URL} className="link-accent reveal mt-12 inline-flex items-center gap-2 self-start text-sm" style={{ ["--i" as string]: 5 }}>
             {t("ai.cta")}
-            <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
           </a>
         </div>
 
