@@ -84,7 +84,7 @@ export function StatTiles() {
       <div className="flex flex-col rounded-lg border border-line bg-surface-2 p-5">
         <div className="mb-4 flex items-baseline justify-between">
           <span className="text-eyebrow uppercase text-ink-subtle">{t("groups.focus.dashboard.due")}</span>
-          <span className="font-mono text-[2.75rem] font-medium leading-none tabular-nums text-ink">05</span>
+          <span className="font-mono text-stat font-medium tabular-nums text-ink">05</span>
         </div>
         <ul>
           {["d1", "d2"].map((k, i) => (

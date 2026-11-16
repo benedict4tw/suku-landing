@@ -66,7 +66,7 @@
   --accent-soft-bg: #232029;  /* active pill / toggle bg */
   --accent-deep: #4b3fc4;
   --accent-deeper: #2a2270;
-  --on-accent: #ffffff;
+  --on-accent: #fffdf9;
   /* rgb channels for glow recipes (accent → deep → deeper, whisper of mauve) */
   --accent-rgb: 124, 108, 240;
   --accent-deep-rgb: 75, 63, 196;
@@ -76,7 +76,7 @@
 
   /* ── Color: neutrals for the light CTA button ─────────── */
   --paper: #f4efe6;
-  --paper-hover: #ffffff;
+  --paper-hover: #fbf8f2;
   --on-paper: #100e0c;
 
   /* ── Color: data (app ProgressBars + cat palette) ─────── */
@@ -102,6 +102,9 @@
   --text-sm: 0.9375rem;   /* 15 */
   --text-xs: 0.8125rem;   /* 13 */
   --text-eyebrow: 0.75rem;/* 12, uppercase + tracking only */
+  --text-2xs: 0.75rem;    /* 12, dense mini-UI labels only */
+  --text-stat: 2.75rem;   /* 44, mono stat numerals in mini-UI */
+  --text-wordmark: 1.375rem; /* 22, "Suku" wordmark */
 
   --leading-display: 1.02;
   --leading-heading: 1.08;
@@ -128,6 +131,7 @@
   --content-max: 75rem; /* 1200 */
 
   /* ── Radii (app: rounded-xl 12, card 16, sheet 22) ────── */
+  --radius-xs: 0.3125rem;/* 5  checkboxes, calendar cells */
   --radius-sm: 0.5rem;   /* 8  small chips inside UI */
   --radius-md: 0.75rem;  /* 12 rows, inputs, buttons in UI */
   --radius-lg: 1rem;     /* 16 app cards */

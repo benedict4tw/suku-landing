@@ -6,7 +6,7 @@ export function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pt-[128px] md:pt-[152px]">
+    <section aria-labelledby="hero-title" className="relative isolate overflow-hidden pt-32 md:pt-36">
       {/* Background: hairline grid with hollow nodes, faded toward the edges */}
       <div aria-hidden className="hero-grid -z-10" />
       <div aria-hidden className="hero-grid-nodes -z-10" />
@@ -22,7 +22,7 @@ export function Hero() {
         >
           <span className="rounded-full bg-accent-fill px-2 py-[2px] text-xs font-semibold text-accent-on">{t("hero.badgeChip")}</span>
           <span>{t("hero.badge")}</span>
-          <ArrowRight size={14} strokeWidth={1.5} aria-hidden className="text-ink-subtle transition-transform duration-fast ease-out group-hover:translate-x-[2px]" />
+          <ArrowRight size={14} strokeWidth={1.5} aria-hidden className="text-ink-subtle transition-transform duration-fast ease-out [@media(hover:hover)]:group-hover:translate-x-[2px]" />
         </a>
 
         <h1

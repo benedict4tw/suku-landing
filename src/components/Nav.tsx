@@ -34,7 +34,7 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-nav transition-[background-color,border-color,backdrop-filter] duration-base ease-out ${
+      className={`fixed inset-x-0 top-0 z-nav transition-[background-color,border-color] duration-base ease-out ${
         solid ? "border-b border-line-soft bg-[color-mix(in_srgb,var(--bg)_80%,transparent)] backdrop-blur-md" : "border-b border-transparent"
       }`}
     >

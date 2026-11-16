@@ -81,7 +81,7 @@
       box-shadow var(--dur-base) var(--ease-out),
       transform var(--dur-fast) var(--ease-out);
   }
-  .btn:active { transform: scale(0.98); }
+  .btn:active { transform: scale(0.97); }
   .btn-paper { background: var(--paper); color: var(--on-paper); box-shadow: var(--glow-soft); }
   .btn-paper:hover { background: var(--paper-hover); box-shadow: var(--glow-accent); }
   .btn-accent { background: var(--accent-fill); color: var(--on-accent); }
@@ -247,6 +247,15 @@
   .faq-item[open] .faq-icon { transform: rotate(45deg); }
   .faq-item[open] .faq-answer { animation: faq-open var(--dur-base) var(--ease-out) both; }
 
+  /* Progress bars fill once their card is revealed */
+  .progress-fill { transform-origin: left center; transform: scaleX(0); transition: transform 1200ms var(--ease-out) 240ms; }
+  .is-visible .progress-fill, .no-js .progress-fill { transform: none; }
+
+  /* Task checkbox */
+  .tick { transition: transform var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
+  label:active .tick { transform: scale(0.9); }
+  .tick-mark { animation: tick-in var(--dur-fast) var(--ease-out) both; }
+
   /* Mobile module marquee */
   .marquee-track { animation: marquee 32s linear infinite; }
 }
@@ -271,6 +280,10 @@
   from { opacity: 0; transform: translateY(-4px); }
   to { opacity: 1; transform: none; }
 }
+@keyframes tick-in {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: none; }
+}
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -278,9 +291,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .bloom { animation: none; }
+  .tick-mark { animation: none; }
+  .progress-fill { transform: none; transition: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero-in, .hero-shot-in { animation: none; }
   .marquee-track { animation: none; }
   .faq-item[open] .faq-answer { animation: none; }
-  *, *::before, *::after { transition-duration: 0.01ms !important; }
+  .btn:active, .tick:active { transform: none; }
 }

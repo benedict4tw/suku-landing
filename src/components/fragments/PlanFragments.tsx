@@ -30,11 +30,11 @@ export function TaskList() {
                 />
                 <span
                   aria-hidden
-                  className={`flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[5px] border transition-colors duration-fast ease-out peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent ${
+                  className={`tick flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-xs border peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent ${
                     isDone ? "border-accent bg-accent" : "border-line-strong group-hover:border-accent"
                   }`}
                 >
-                  {isDone && <Check size={12} strokeWidth={2.5} className="text-accent-on" />}
+                  {isDone && <Check size={12} strokeWidth={2.5} className="tick-mark text-accent-on" />}
                 </span>
                 <span className={`flex-1 truncate text-sm transition-colors duration-fast ${isDone ? "text-ink-subtle line-through" : "text-ink"}`}>
                   {label}
@@ -95,11 +95,12 @@ export function WeekCalendar() {
     [3, 3, 2, "e3", "accent"],
     [4, 4, 2, "e4", "year"],
   ];
+  const dot = { accent: "bg-accent", month: "bg-progress-month", week: "bg-progress-week", year: "bg-progress-year" };
   const tone = {
-    accent: "border-l-accent bg-accent-soft",
-    month: "border-l-progress-month bg-surface-2",
-    week: "border-l-progress-week bg-surface-2",
-    year: "border-l-progress-year bg-surface-2",
+    accent: "bg-accent-soft",
+    month: "bg-surface-3",
+    week: "bg-surface-3",
+    year: "bg-surface-3",
   };
   return (
     <div data-ui className="ui-panel p-3">
@@ -118,15 +119,16 @@ export function WeekCalendar() {
       </div>
       <div className="relative grid grid-cols-5 grid-rows-[repeat(5,28px)] gap-1">
         {Array.from({ length: 25 }).map((_, i) => (
-          <span key={i} aria-hidden className="rounded-[6px] bg-surface-sunken" />
+          <span key={i} aria-hidden className="rounded-xs bg-surface-sunken" />
         ))}
         {events.map(([d, r, s, k, c], i) => (
           <span
             key={i}
-            className={`z-[1] overflow-hidden rounded-[6px] border-l-2 px-[6px] py-1 text-[0.75rem] leading-tight text-ink ${tone[c]}`}
+            className={`z-[1] flex items-start gap-1 overflow-hidden rounded-xs px-1 py-1 text-2xs text-ink sm:px-2 ${tone[c]}`}
             style={{ gridColumn: d + 1, gridRow: `${r} / span ${s}` }}
           >
-            {t(`groups.plan.calendar.${k}`)}
+            <span aria-hidden className={`mt-1 h-[6px] w-[6px] shrink-0 rounded-full ${dot[c]}`} />
+            <span className="min-w-0 break-words">{t(`groups.plan.calendar.${k}`)}</span>
           </span>
         ))}
       </div>

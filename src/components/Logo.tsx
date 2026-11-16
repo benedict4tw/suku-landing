@@ -12,7 +12,7 @@ export function Logo() {
   return (
     <span className="inline-flex items-center gap-2">
       <LogoMark />
-      <span className="font-display text-[1.375rem] font-semibold leading-none tracking-[-0.02em] text-ink">Suku</span>
+      <span className="font-display text-wordmark font-semibold text-ink">Suku</span>
     </span>
   );
 }
