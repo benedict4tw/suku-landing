@@ -17,13 +17,13 @@ export function Legal({ kind }: { kind: "impressum" | "privacy" }) {
     window.scrollTo(0, 0);
   }, [title]);
   return (
-    <section aria-labelledby="legal-title" className="container-page min-h-[70vh] pt-13">
+    <section aria-labelledby="legal-title" className="container-page min-h-[70vh] pt-40">
       <Link to="/" className="link-accent inline-flex items-center gap-2 text-sm">
         <ArrowLeft size={16} strokeWidth={1.75} aria-hidden />
         {t("legal.back")}
       </Link>
-      <h1 id="legal-title" className="mt-8 text-h2 text-ink">{title}</h1>
-      <div className="mt-8 max-w-[62ch] space-y-4 text-base text-ink-muted">
+      <h1 id="legal-title" className="mt-12 text-h2 text-ink">{title}</h1>
+      <div className="mt-12 max-w-[62ch] space-y-4 text-base text-ink-muted">
         <p>{t("legal.placeholder")}</p>
         <p>{t("legal.contact")}</p>
       </div>
@@ -34,9 +34,9 @@ export function Legal({ kind }: { kind: "impressum" | "privacy" }) {
 export function NotFound() {
   const { t } = useTranslation();
   return (
-    <section className="container-page min-h-[70vh] pt-13">
+    <section className="container-page min-h-[70vh] pt-40">
       <h1 className="text-h2 text-ink">{t("notFound.title")}</h1>
-      <Link to="/" className="link-accent mt-6 inline-flex text-sm">{t("notFound.back")}</Link>
+      <Link to="/" className="link-accent mt-8 inline-flex text-sm">{t("notFound.back")}</Link>
     </section>
   );
 }

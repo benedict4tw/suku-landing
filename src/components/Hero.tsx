@@ -27,7 +27,7 @@ export function Hero() {
 
         <h1
           id="hero-title"
-          className="hero-in mt-5 max-w-[14ch] text-display font-semibold text-ink md:max-w-none"
+          className="hero-in mt-6 max-w-[14ch] text-display font-semibold text-ink md:max-w-none"
           style={{ ["--i" as string]: 1 }}
         >
           <span className="block">{t("hero.titleA")}</span>
@@ -38,11 +38,11 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="hero-in mt-5 max-w-[600px] text-lead text-ink-muted" style={{ ["--i" as string]: 2 }}>
+        <p className="hero-in mt-6 max-w-[600px] text-lead text-ink-muted" style={{ ["--i" as string]: 2 }}>
           {t("hero.sub")}
         </p>
 
-        <div className="hero-in mt-8 flex flex-col items-center gap-3 sm:flex-row" style={{ ["--i" as string]: 3 }}>
+        <div className="hero-in mt-12 flex flex-col items-center gap-3 sm:flex-row" style={{ ["--i" as string]: 3 }}>
           <a href={APP_URL} className="btn btn-paper">
             {t("hero.cta")}
             <ArrowRight size={16} strokeWidth={1.75} aria-hidden />
@@ -57,7 +57,9 @@ export function Hero() {
       </div>
 
       {/* Product shot, cropped by the bottom of the hero */}
-      <div className="container-page mt-10 md:mt-12">
+      <div className="container-page relative mt-20 md:mt-32">
+        {/* Bloom spilling behind the frame */}
+        <div aria-hidden className="bloom-frame" />
         <div className="hero-shot-in relative mx-auto h-[clamp(240px,58vw,600px)] max-w-[1120px] overflow-hidden md:h-[clamp(360px,46vw,640px)]">
           <div className="frame rounded-b-none border-b-0 pb-0">
             <div className="frame-inner rounded-b-none border-b-0">

@@ -7,8 +7,8 @@ export function Footer() {
   const { t } = useTranslation();
   const linkCls = "text-sm text-ink-muted transition-colors duration-fast ease-out hover:text-ink";
   return (
-    <footer className="container-page mt-section pb-8">
-      <div className="grid gap-9 pb-9 md:grid-cols-[minmax(0,6fr)_minmax(0,3fr)_minmax(0,3fr)]">
+    <footer className="container-page mt-section pb-12">
+      <div className="grid grid-cols-2 gap-10 pb-16 md:grid-cols-[minmax(0,6fr)_minmax(0,3fr)_minmax(0,3fr)]">
         <div>
           <a href="/" aria-label={t("nav.home")} className="inline-block rounded-sm">
             <Logo />
@@ -31,9 +31,11 @@ export function Footer() {
           </ul>
         </nav>
       </div>
-      <div className="flex items-center justify-between gap-4 border-t border-line-soft pt-6">
+      <div className="flex items-center justify-between gap-4 border-t border-line-soft pt-8">
         <p className="text-xs text-ink-subtle">{t("footer.copyright")}</p>
-        <p className="text-xs text-ink-subtle">suku.live</p>
+        <p className="text-xs text-ink-subtle">
+          {t("footer.builtBy")} <span className="text-ink-muted">Benedict Donkor</span>
+        </p>
       </div>
     </footer>
   );

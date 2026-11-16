@@ -178,12 +178,30 @@
     "title": "Warum ",
     "titleEm": "Suku",
     "sub": "Gebaut für den Tag einer Person, nicht für den Workflow eines Teams.",
-    "pwa": { "title": "Installierbar wie eine App", "body": "Leg Suku auf deinen Homescreen oder ins Dock. Läuft auf Handy und Desktop." },
-    "lang": { "title": "Englisch und Deutsch", "body": "Schalte die ganze App mit einem Tipp zwischen EN und DE um." },
-    "remind": { "title": "Erinnerungen, die ankommen", "body": "Push-Benachrichtigungen für Erinnerungen und Aufgaben, die morgen fällig sind." },
-    "gcal": { "title": "Google Kalender", "body": "Verbinde deinen Kalender und sieh Termine neben deinen Aufgaben." },
-    "ai": { "title": "KI eingebaut", "body": "Suku KI arbeitet mit deinen echten Daten: Aufgaben, Projekte, Gewohnheiten und Workouts." },
-    "fast": { "title": "Schnell und fokussiert", "body": "Eine ruhige, dunkle Oberfläche, die nicht zwischen dir und deinem Tag steht." }
+    "pwa": {
+      "title": "Installierbar wie eine App",
+      "body": "Leg Suku auf deinen Homescreen oder ins Dock. Läuft auf Handy und Desktop."
+    },
+    "lang": {
+      "title": "Englisch und Deutsch",
+      "body": "Schalte die ganze App mit einem Tipp zwischen EN und DE um."
+    },
+    "remind": {
+      "title": "Erinnerungen, die ankommen",
+      "body": "Push-Benachrichtigungen für Erinnerungen und Aufgaben, die morgen fällig sind."
+    },
+    "gcal": {
+      "title": "Google Kalender",
+      "body": "Verbinde deinen Kalender und sieh Termine neben deinen Aufgaben."
+    },
+    "ai": {
+      "title": "KI eingebaut",
+      "body": "Suku KI arbeitet mit deinen echten Daten: Aufgaben, Projekte, Gewohnheiten und Workouts."
+    },
+    "fast": {
+      "title": "Schnell und fokussiert",
+      "body": "Eine ruhige, dunkle Oberfläche, die nicht zwischen dir und deinem Tag steht."
+    }
   },
   "faq": {
     "title": "Fragen",
@@ -217,7 +235,8 @@
     "legal": "Rechtliches",
     "impressum": "Impressum",
     "privacy": "Datenschutz",
-    "copyright": "© 2026 Suku"
+    "copyright": "© 2026 Suku",
+    "builtBy": "Ein Projekt von"
   },
   "legal": {
     "back": "Zurück zur Startseite",

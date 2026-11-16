@@ -110,14 +110,14 @@
   .card:hover { border-color: var(--border-strong); }
   .card-glow {
     background:
-      radial-gradient(120% 90% at 0% 0%, rgba(124, 108, 240, 0.28) 0%, rgba(75, 63, 196, 0.12) 35%, transparent 65%),
-      radial-gradient(60% 50% at 100% 100%, rgba(155, 107, 168, 0.08) 0%, transparent 70%),
+      radial-gradient(110% 95% at 0% 0%, rgba(var(--accent-rgb), 0.34) 0%, rgba(var(--accent-deep-rgb), 0.14) 38%, transparent 68%),
+      radial-gradient(60% 50% at 100% 100%, rgba(var(--mauve-rgb), 0.08) 0%, transparent 70%),
       var(--surface-1);
     border-color: var(--border);
   }
   .card-glow-bottom {
     background:
-      radial-gradient(90% 70% at 50% 110%, rgba(124, 108, 240, 0.32) 0%, rgba(75, 63, 196, 0.14) 40%, transparent 70%),
+      radial-gradient(90% 70% at 50% 110%, rgba(var(--accent-rgb), 0.32) 0%, rgba(var(--accent-deep-rgb), 0.14) 40%, transparent 70%),
       var(--surface-1);
     border-color: var(--border);
   }
@@ -136,7 +136,7 @@
 
   /* ── Hero grid: hairlines + hollow nodes, faded at edges ─ */
   .hero-grid {
-    --cell: 168px;
+    --cell: var(--hero-cell);
     position: absolute;
     inset: 0;
     background-image:
@@ -151,9 +151,9 @@
   .hero-grid-nodes {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at center, transparent 3.5px, rgba(147, 132, 108, 0.32) 3.5px, rgba(147, 132, 108, 0.32) 4.5px, transparent 5px);
-    background-size: 168px 168px;
-    background-position: calc(50% + 84px - 84px) -84px;
+    background-image: radial-gradient(circle at center, transparent 3.5px, rgba(var(--line-rgb), 0.32) 3.5px, rgba(var(--line-rgb), 0.32) 4.5px, transparent 5px);
+    background-size: var(--hero-cell) var(--hero-cell);
+    background-position: 50% calc(var(--hero-cell) / -2);
     mask-image: radial-gradient(ellipse 66% 58% at 50% 38%, #000 25%, transparent 72%);
     -webkit-mask-image: radial-gradient(ellipse 66% 58% at 50% 38%, #000 25%, transparent 72%);
     pointer-events: none;
@@ -168,7 +168,7 @@
     aspect-ratio: 16 / 9;
     transform: translate(-50%, 30%);
     background:
-      radial-gradient(closest-side, rgba(var(--accent-rgb), 0.7) 0%, rgba(var(--accent-deep-rgb), 0.5) 30%, rgba(var(--accent-deeper-rgb), 0.28) 58%, transparent 100%);
+      radial-gradient(closest-side, rgba(var(--accent-rgb), 0.8) 0%, rgba(var(--accent-deep-rgb), 0.55) 30%, rgba(var(--accent-deeper-rgb), 0.28) 58%, transparent 100%);
     filter: blur(28px);
     pointer-events: none;
     animation: bloom-breathe 8s ease-in-out infinite;
@@ -184,6 +184,25 @@
     background: radial-gradient(closest-side, rgba(var(--mauve-rgb), 0.26), transparent 100%);
     filter: blur(36px);
     pointer-events: none;
+  }
+
+  .bloom-frame {
+    position: absolute;
+    left: 50%;
+    top: -30%;
+    width: min(1560px, 140vw);
+    height: 130%;
+    transform: translateX(-50%);
+    background: radial-gradient(50% 40% at 50% 34%, rgba(var(--accent-rgb), 0.55) 0%, rgba(var(--accent-deep-rgb), 0.3) 40%, rgba(var(--accent-deeper-rgb), 0.14) 68%, transparent 100%);
+    filter: blur(44px);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .bloom-card {
+    width: min(1100px, 150vw);
+    aspect-ratio: 2 / 1;
+    transform: translate(-50%, 58%);
+    animation-name: bloom-breathe-card;
   }
 
   /* ── Product frame ─────────────────────────────────── */
@@ -235,6 +254,10 @@
 @keyframes bloom-breathe {
   0%, 100% { opacity: 0.82; transform: translate(-50%, 30%) scale(1); }
   50% { opacity: 1; transform: translate(-50%, 28%) scale(1.04); }
+}
+@keyframes bloom-breathe-card {
+  0%, 100% { opacity: 0.82; transform: translate(-50%, 58%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, 55%) scale(1.04); }
 }
 @keyframes hero-in {
   from { opacity: 0; transform: translateY(16px); }

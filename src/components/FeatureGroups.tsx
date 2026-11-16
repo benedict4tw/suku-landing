@@ -17,7 +17,7 @@ export function FeatureGroups() {
           title: t("groups.plan.tasks.title"),
           body: t("groups.plan.tasks.body"),
           ui: (
-            <div className="grid gap-4 sm:grid-cols-[1.35fr_1fr] sm:items-start">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] sm:items-start">
               <TaskList />
               <ProjectProgress />
             </div>

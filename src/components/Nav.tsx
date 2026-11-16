@@ -38,7 +38,7 @@ export function Nav() {
         solid ? "border-b border-line-soft bg-[color-mix(in_srgb,var(--bg)_80%,transparent)] backdrop-blur-md" : "border-b border-transparent"
       }`}
     >
-      <nav aria-label="Main" className="container-page flex h-[72px] items-center justify-between gap-6">
+      <nav aria-label="Main" className="container-page flex h-[72px] items-center justify-between gap-8">
         <a href="/" aria-label={t("nav.home")} className="rounded-sm">
           <Logo />
         </a>
@@ -76,7 +76,7 @@ export function Nav() {
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="container-page border-t border-line-soft pb-6 pt-4 md:hidden">
+        <div id="mobile-menu" className="container-page border-t border-line-soft pb-8 pt-4 md:hidden">
           <ul className="flex flex-col">
             {links.map((l) => (
               <li key={l.href}>
@@ -90,7 +90,7 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <div className="mt-6 flex items-center justify-between gap-4">
+          <div className="mt-8 flex items-center justify-between gap-4">
             <LangToggle />
             <div className="flex items-center gap-2">
               <a href={APP_URL} className="btn btn-ghost btn-sm">

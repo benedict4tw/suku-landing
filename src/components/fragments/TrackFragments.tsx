@@ -73,29 +73,29 @@ export function HabitStreaks() {
   ];
   return (
     <div data-ui className="ui-panel p-4">
-      <div className="mb-3 grid grid-cols-[1fr_auto] items-end gap-3">
+      <div className="mb-3 grid grid-cols-[minmax(0,1fr)_auto] items-end gap-3">
         <span />
-        <div className="grid grid-cols-7 gap-[6px]" aria-hidden>
+        <div className="grid grid-cols-7 gap-1 sm:gap-[6px]" aria-hidden>
           {days.map((d) => (
-            <span key={d} className="w-[18px] text-center text-xs text-ink-subtle">{d.slice(0, 1)}</span>
+            <span key={d} className="w-[14px] text-center sm:w-[18px] text-xs text-ink-subtle">{d.slice(0, 1)}</span>
           ))}
         </div>
       </div>
       <ul className="space-y-3">
         {habits.map((h) => (
-          <li key={h.name} className="grid grid-cols-[1fr_auto] items-center gap-3">
+          <li key={h.name} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
             <div className="min-w-0">
               <p className="truncate text-sm text-ink">{h.name}</p>
               {h.streak > 0 && (
                 <p className="font-mono text-xs text-ink-subtle">{t("groups.track.habits.streak", { count: h.streak })}</p>
               )}
             </div>
-            <div className="grid grid-cols-7 gap-[6px]">
+            <div className="grid grid-cols-7 gap-1 sm:gap-[6px]">
               {h.done.map((d, i) => (
                 <span
                   key={i}
                   aria-hidden
-                  className={`h-[18px] w-[18px] rounded-full ${
+                  className={`h-[14px] w-[14px] rounded-full sm:h-[18px] sm:w-[18px] ${
                     d ? "bg-accent" : i === 6 ? "border border-dashed border-line-strong" : "border border-line"
                   }`}
                 />

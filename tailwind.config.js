@@ -61,25 +61,6 @@ export default {
       h2: [v("text-h2"), { lineHeight: v("leading-heading"), letterSpacing: v("tracking-display") }],
       display: [v("text-display"), { lineHeight: v("leading-display"), letterSpacing: v("tracking-display") }],
     },
-    spacing: {
-      0: "0",
-      px: "1px",
-      1: v("space-1"),
-      2: v("space-2"),
-      3: v("space-3"),
-      4: v("space-4"),
-      5: v("space-5"),
-      6: v("space-6"),
-      7: v("space-7"),
-      8: v("space-8"),
-      9: v("space-9"),
-      10: v("space-10"),
-      11: v("space-11"),
-      12: v("space-12"),
-      13: v("space-13"),
-      section: v("section-gap"),
-      gutter: v("gutter"),
-    },
     borderRadius: {
       none: "0",
       sm: v("radius-sm"),
@@ -90,6 +71,8 @@ export default {
       full: v("radius-full"),
     },
     extend: {
+      // Default 4px spacing scale, used in even steps only (8px grid). Semantic extras below.
+      spacing: { section: v("section-gap"), gutter: v("gutter") },
       maxWidth: { content: v("content-max") },
       boxShadow: {
         glow: v("glow-accent"),

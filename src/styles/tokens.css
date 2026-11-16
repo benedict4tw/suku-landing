@@ -149,6 +149,12 @@
   --reveal-distance: 14px;
   --stagger: 80ms;
 
+  --hero-cell: 96px;
+
   /* ── Layers ───────────────────────────────────────────── */
   --z-nav: 50;
+}
+
+@media (min-width: 768px) {
+  :root { --hero-cell: 168px; }
 }

@@ -178,12 +178,30 @@
     "title": "Why ",
     "titleEm": "Suku",
     "sub": "Built for one person's day, not for a team's workflow.",
-    "pwa": { "title": "Installs like an app", "body": "Add Suku to your home screen or dock. It runs on phone and desktop." },
-    "lang": { "title": "English and German", "body": "Switch the whole app between EN and DE with one tap." },
-    "remind": { "title": "Reminders that arrive", "body": "Push notifications for reminders and for tasks due tomorrow." },
-    "gcal": { "title": "Google Calendar", "body": "Connect your calendar and see events next to your tasks." },
-    "ai": { "title": "AI built in", "body": "Suku AI works with your real data: tasks, projects, habits and workouts." },
-    "fast": { "title": "Fast and focused", "body": "A quiet dark interface with nothing between you and your day." }
+    "pwa": {
+      "title": "Installs like an app",
+      "body": "Add Suku to your home screen or dock. It runs on phone and desktop."
+    },
+    "lang": {
+      "title": "English and German",
+      "body": "Switch the whole app between EN and DE with one tap."
+    },
+    "remind": {
+      "title": "Reminders that arrive",
+      "body": "Push notifications for reminders and for tasks due tomorrow."
+    },
+    "gcal": {
+      "title": "Google Calendar",
+      "body": "Connect your calendar and see events next to your tasks."
+    },
+    "ai": {
+      "title": "AI built in",
+      "body": "Suku AI works with your real data: tasks, projects, habits and workouts."
+    },
+    "fast": {
+      "title": "Fast and focused",
+      "body": "A quiet dark interface with nothing between you and your day."
+    }
   },
   "faq": {
     "title": "Questions",
@@ -217,7 +235,8 @@
     "legal": "Legal",
     "impressum": "Impressum",
     "privacy": "Datenschutz",
-    "copyright": "© 2026 Suku"
+    "copyright": "© 2026 Suku",
+    "builtBy": "A project by"
   },
   "legal": {
     "back": "Back to home",

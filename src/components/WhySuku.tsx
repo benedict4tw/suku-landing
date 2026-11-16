@@ -14,7 +14,7 @@ export function WhySuku() {
   const { t } = useTranslation();
   return (
     <section aria-labelledby="why-title" className="container-page pt-section">
-      <div className="grid gap-9 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-16">
         <header>
           <h2 id="why-title" className="reveal text-h2 text-ink">
             {t("why.title")}
@@ -24,9 +24,9 @@ export function WhySuku() {
             {t("why.sub")}
           </p>
         </header>
-        <ul className="grid gap-x-8 gap-y-9 sm:grid-cols-2 md:grid-cols-3">
+        <ul className="grid gap-x-10 gap-y-12 sm:grid-cols-2 md:grid-cols-3">
           {ITEMS.map(({ key, icon: Icon }, i) => (
-            <li key={key} className="reveal border-t border-line-soft pt-5" style={{ ["--i" as string]: i % 3 }}>
+            <li key={key} className="reveal border-t border-line-soft pt-6" style={{ ["--i" as string]: i % 3 }}>
               <Icon size={20} strokeWidth={1.5} aria-hidden className="text-accent" />
               <h3 className="mt-4 font-sans text-base font-semibold text-ink">{t(`why.${key}.title`)}</h3>
               <p className="mt-2 text-sm text-ink-muted">{t(`why.${key}.body`)}</p>

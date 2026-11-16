@@ -40,22 +40,22 @@ export function FeatureGroup({ id, ns, wide, small, captions }: Props) {
         </p>
       </header>
 
-      <div className="mt-9 grid gap-4 md:mt-10 md:grid-cols-2 md:gap-5">
+      <div className="mt-16 grid grid-cols-1 gap-4 md:mt-20 md:grid-cols-2 md:gap-6">
         {/* Wide glow card */}
-        <article className="card card-glow reveal grid gap-8 p-6 md:col-span-2 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:p-10">
+        <article className="card card-glow reveal grid min-w-0 grid-cols-1 gap-12 p-8 md:col-span-2 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:p-20">
           <CardCopy title={wide.title} body={wide.body} />
-          <div>{wide.ui}</div>
+          <div className="min-w-0">{wide.ui}</div>
         </article>
 
         {small.map((c, i) => (
-          <article key={c.key} className="card reveal flex flex-col gap-8 p-6 md:p-8" style={{ ["--i" as string]: i + 1 }}>
+          <article key={c.key} className="card reveal flex min-w-0 flex-col gap-12 p-8 md:p-12" style={{ ["--i" as string]: i + 1 }}>
             <CardCopy title={c.title} body={c.body} />
-            <div className="mt-auto">{c.ui}</div>
+            <div className="mt-auto min-w-0">{c.ui}</div>
           </article>
         ))}
       </div>
 
-      <ul className="mt-8 grid gap-5 sm:grid-cols-3 sm:gap-6 md:mt-9">
+      <ul className="mt-12 grid gap-6 sm:grid-cols-3 sm:gap-8 md:mt-16">
         {captions.map(({ icon: Icon, key }, i) => (
           <li key={key} className="reveal flex items-start gap-3 text-sm text-ink-muted" style={{ ["--i" as string]: i }}>
             <Icon size={18} strokeWidth={1.5} aria-hidden className="mt-[2px] shrink-0 text-accent" />

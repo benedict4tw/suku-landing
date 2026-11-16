@@ -9,7 +9,7 @@ export function AskSukuInput({ filled = false }: { filled?: boolean }) {
       <div aria-hidden className="absolute -inset-px rounded-xl bg-accent opacity-[0.18] blur-[16px]" />
       <div className="relative flex items-center rounded-xl border border-line bg-surface-1">
         <Sparkles size={16} strokeWidth={1.5} aria-hidden className="ml-4 shrink-0 text-accent" />
-        <p className={`flex-1 truncate px-3 py-4 text-sm ${filled ? "text-ink" : "text-ink-subtle"}`}>
+        <p className={`min-w-0 flex-1 px-3 py-4 text-sm ${filled ? "text-ink" : "text-ink-subtle"}`}>
           {filled ? t("ai.askExample") : t("ai.askPlaceholder")}
         </p>
         <span aria-hidden className="m-2 flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent-soft text-accent">
@@ -80,7 +80,7 @@ export function StatTiles() {
     { label: t("groups.focus.dashboard.overdue"), sub: t("groups.focus.dashboard.overdueSub"), value: 6, danger: true },
   ];
   return (
-    <div data-ui className="grid gap-3 md:grid-cols-[1.6fr_1fr]">
+    <div data-ui className="grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
       <div className="flex flex-col rounded-lg border border-line bg-surface-2 p-5">
         <div className="mb-4 flex items-baseline justify-between">
           <span className="text-eyebrow uppercase text-ink-subtle">{t("groups.focus.dashboard.due")}</span>
