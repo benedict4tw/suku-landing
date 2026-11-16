@@ -75,7 +75,7 @@ export function ProjectProgress() {
           >
             <div className={`h-full rounded-full ${p.color}`} style={{ width: `${p.pct}%` }} />
           </div>
-          <p className="mt-2 text-xs text-ink-subtle">{p.meta}</p>
+          <p className="mt-2 font-mono text-xs text-ink-subtle">{p.meta}</p>
         </div>
       ))}
     </div>

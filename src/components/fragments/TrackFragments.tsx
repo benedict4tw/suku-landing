@@ -120,7 +120,7 @@ export function GymLog() {
     <div data-ui className="ui-panel p-4">
       <div className="mb-3 flex items-center justify-between">
         <p className="text-sm font-medium text-ink">{t("groups.track.gym.exercise")}</p>
-        <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft px-2 py-[2px] text-xs font-medium text-accent-text">
+        <span className="inline-flex items-center gap-1 rounded-full bg-accent-soft px-2 py-[2px] font-mono text-xs font-medium text-accent-text">
           <Trophy size={12} strokeWidth={1.75} aria-hidden />
           {t("groups.track.gym.pr")} 82.5 {t("groups.track.gym.kg")}
         </span>

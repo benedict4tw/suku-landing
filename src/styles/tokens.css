@@ -50,6 +50,8 @@
   --border-soft: rgba(147, 132, 108, 0.14);
   --border-strong: rgba(147, 132, 108, 0.4);
   --grid-line: rgba(147, 132, 108, 0.09);
+  --hover-bg: rgba(244, 239, 230, 0.05); /* app --hover-bg */
+  --frame-bg: rgba(24, 21, 15, 0.72);
 
   /* ── Color: text (app: --text-body / muted #b6a99a) ───── */
   --text: #f4efe6;

@@ -94,7 +94,7 @@ export function StatTiles() {
             </li>
           ))}
         </ul>
-        <p className="pt-1 text-xs text-ink-subtle">{t("groups.focus.dashboard.more")}</p>
+        <p className="pt-1 font-mono text-xs text-ink-subtle">{t("groups.focus.dashboard.more")}</p>
       </div>
       <ul className="flex flex-col gap-2">
         {strip.map((row) => (
