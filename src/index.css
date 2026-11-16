@@ -58,7 +58,7 @@
     font-weight: 500;
     letter-spacing: var(--tracking-eyebrow);
     text-transform: uppercase;
-    color: var(--text-subtle);
+    color: var(--text-soft);
   }
 
   /* ── Buttons ───────────────────────────────────────── */
@@ -144,8 +144,8 @@
       linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
     background-size: var(--cell) var(--cell);
     background-position: calc(50% + var(--cell) / 2) 0;
-    mask-image: radial-gradient(ellipse 70% 62% at 50% 38%, #000 30%, transparent 78%);
-    -webkit-mask-image: radial-gradient(ellipse 70% 62% at 50% 38%, #000 30%, transparent 78%);
+    mask-image: var(--hero-grid-mask);
+    -webkit-mask-image: var(--hero-grid-mask);
     pointer-events: none;
   }
   .hero-grid-nodes {
@@ -154,8 +154,8 @@
     background-image: radial-gradient(circle at center, transparent 3.5px, rgba(var(--line-rgb), 0.32) 3.5px, rgba(var(--line-rgb), 0.32) 4.5px, transparent 5px);
     background-size: var(--hero-cell) var(--hero-cell);
     background-position: 50% calc(var(--hero-cell) / -2);
-    mask-image: radial-gradient(ellipse 66% 58% at 50% 38%, #000 25%, transparent 72%);
-    -webkit-mask-image: radial-gradient(ellipse 66% 58% at 50% 38%, #000 25%, transparent 72%);
+    mask-image: var(--hero-grid-mask);
+    -webkit-mask-image: var(--hero-grid-mask);
     pointer-events: none;
   }
 

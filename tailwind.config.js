@@ -22,6 +22,7 @@ export default {
       },
       ink: {
         DEFAULT: v("text"),
+        soft: v("text-soft"),
         muted: v("text-muted"),
         subtle: v("text-subtle"),
       },

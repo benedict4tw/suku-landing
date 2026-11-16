@@ -21,6 +21,7 @@ export function Hero() {
           style={{ ["--i" as string]: 0 }}
         >
           <span className="rounded-full bg-accent-fill px-2 py-[2px] text-xs font-semibold text-accent-on">{t("hero.badgeChip")}</span>
+          <span className="sr-only">: </span>
           <span>{t("hero.badge")}</span>
           <ArrowRight size={14} strokeWidth={1.5} aria-hidden className="text-ink-subtle transition-transform duration-fast ease-out [@media(hover:hover)]:group-hover:translate-x-[2px]" />
         </a>
@@ -30,7 +31,7 @@ export function Hero() {
           className="hero-in mt-6 max-w-[14ch] text-display font-semibold text-ink md:max-w-none"
           style={{ ["--i" as string]: 1 }}
         >
-          <span className="block">{t("hero.titleA")}</span>
+          <span className="block">{t("hero.titleA")}</span>{" "}
           <span className="block">
             {t("hero.titleB1")}
             <em className="accent-word">{t("hero.titleEm")}</em>
@@ -51,7 +52,7 @@ export function Hero() {
             {t("hero.secondary")}
           </a>
         </div>
-        <p className="hero-in mt-3 text-xs text-ink-subtle" style={{ ["--i" as string]: 4 }}>
+        <p className="hero-in mt-3 text-xs text-ink-soft" style={{ ["--i" as string]: 4 }}>
           {t("hero.note")}
         </p>
       </div>

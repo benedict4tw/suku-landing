@@ -53,6 +53,7 @@
 
   /* ── Color: text (app: --text-body / muted #b6a99a) ───── */
   --text: #f4efe6;
+  --text-soft: #b6a99a;   /* app muted; for text over glow or grid, 8.4:1 on --bg */
   --text-muted: #a39686;  /* AA: 6.7:1 on --bg */
   --text-subtle: #8f8577; /* AA: 5.3:1 on --bg, 5.0:1 on --surface-1 */
 
@@ -154,11 +155,16 @@
   --stagger: 80ms;
 
   --hero-cell: 96px;
+  /* Mobile: grid stays out from under the copy; desktop: classic radial fade */
+  --hero-grid-mask: linear-gradient(to bottom, #000 0%, transparent 18%, transparent 62%, rgba(0,0,0,0.6) 80%, transparent 100%);
 
   /* ── Layers ───────────────────────────────────────────── */
   --z-nav: 50;
 }
 
 @media (min-width: 768px) {
-  :root { --hero-cell: 168px; }
+  :root {
+    --hero-cell: 168px;
+    --hero-grid-mask: radial-gradient(ellipse 70% 62% at 50% 38%, #000 30%, transparent 78%);
+  }
 }
