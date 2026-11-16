@@ -22,6 +22,8 @@ const routes = [
 for (const r of routes) {
   const html = await render(r.url, r.lang);
   let page = template.replace('<div id="root"></div>', `<div id="root" data-prerendered="${r.url}" data-lang="${r.lang}">${html}</div>`);
+  const legalTitle = { "/impressum": "Impressum · Suku", "/datenschutz": "Datenschutz · Suku" }[r.url];
+  if (legalTitle) page = page.replace(/<title>[^<]*<\/title>/, `<title>${legalTitle}</title>`);
   if (r.lang === "de") {
     page = page
       .replace('<html lang="en"', '<html lang="de"')
