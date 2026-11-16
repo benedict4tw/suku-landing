@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import { useTranslation } from "react-i18next";
 import { Nav } from "./components/Nav";
@@ -36,7 +36,7 @@ function DocumentLang() {
 export default function App() {
   const { t } = useTranslation();
   return (
-    <BrowserRouter>
+    <>
       <DocumentLang />
       <a
         href="#main"
@@ -57,6 +57,6 @@ export default function App() {
       </main>
       <Footer />
       <Analytics />
-    </BrowserRouter>
+    </>
   );
 }

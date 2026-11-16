@@ -5,3 +5,4 @@ dist/
 .env.local
 .env*.local
 .taste-skill/
+dist-ssr

@@ -28,7 +28,7 @@ export function Hero() {
 
         <h1
           id="hero-title"
-          className="hero-in mt-6 text-display font-semibold text-ink"
+          className="mt-6 text-display font-semibold text-ink"
           style={{ ["--i" as string]: 1 }}
         >
           <span className="block">{t("hero.titleA")}</span>{" "}
@@ -39,7 +39,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="hero-in mt-6 max-w-[600px] text-lead text-ink-muted" style={{ ["--i" as string]: 2 }}>
+        <p className="mt-6 max-w-[600px] text-lead text-ink-muted">
           {t("hero.sub")}
         </p>
 

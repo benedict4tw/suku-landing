@@ -15,10 +15,14 @@ i18n
     fallbackLng: 'en',
     supportedLngs: ['en', 'de'],
     detection: {
-      // Check localStorage first, then browser language
-      order: ['localStorage', 'navigator'],
+      // Explicit choice (localStorage/cookie) first, then browser language.
+      // The cookie lets the edge (vercel.json rewrites) serve the matching prerendered HTML.
+      order: ['localStorage', 'cookie', 'navigator'],
       lookupLocalStorage: 'suku_lang',
-      caches: ['localStorage'],
+      lookupCookie: 'suku_lang',
+      caches: ['localStorage', 'cookie'],
+      cookieMinutes: 60 * 24 * 365,
+      cookieOptions: { path: '/', sameSite: 'lax' },
     },
     interpolation: { escapeValue: false },
   })

@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useSyncExternalStore } from "react";
 import { useTranslation } from "react-i18next";
 import { Trophy } from "lucide-react";
 
@@ -18,16 +18,24 @@ function elapsed(now: Date) {
   return { year: pct(yearStart, yearEnd), month: pct(monthStart, monthEnd), week: pct(weekStart, weekEnd) };
 }
 
+// The date only matters at mount time; there's nothing to subscribe to.
+const subscribeNever = () => () => {};
+const pageLoadedAt = typeof window === "undefined" ? 0 : Date.now();
+const getClientNow = () => pageLoadedAt;
+const getServerNow = () => null;
+
 export function ProgressBars({ large = false }: { large?: boolean }) {
   const { t, i18n } = useTranslation();
-  const now = useMemo(() => new Date(), []);
-  const v = elapsed(now);
+  // Computed after mount: the HTML is prerendered at build time, the bars are live for the visitor's today.
+  const nowMs = useSyncExternalStore(subscribeNever, getClientNow, getServerNow);
+  const now = nowMs === null ? null : new Date(nowMs);
+  const v = now ? elapsed(now) : { year: 0, month: 0, week: 0 };
   const rows = [
     { key: "year", pct: v.year, bar: "bg-progress-year", ink: "text-progress-year-ink" },
     { key: "month", pct: v.month, bar: "bg-progress-month", ink: "text-progress-month" },
     { key: "week", pct: v.week, bar: "bg-progress-week", ink: "text-progress-week" },
   ] as const;
-  const date = now.toLocaleDateString(i18n.resolvedLanguage === "de" ? "de-DE" : "en-US", {
+  const date = (now ?? new Date(0)).toLocaleDateString(i18n.resolvedLanguage === "de" ? "de-DE" : "en-US", {
     weekday: "long",
     month: "long",
     day: "numeric",
@@ -50,14 +58,14 @@ export function ProgressBars({ large = false }: { large?: boolean }) {
                 aria-valuetext={`${r.pct}%`}
                 className={`flex-1 overflow-hidden rounded-full bg-progress-track ${large ? "h-2" : "h-[6px]"}`}
               >
-                <div className={`h-full rounded-full ${r.bar} progress-fill`} style={{ width: `${Math.max(r.pct, 1)}%` }} />
+                <div className={`h-full rounded-full ${r.bar} progress-fill`} style={{ width: `${now ? Math.max(r.pct, 1) : 0}%` }} />
               </div>
               <span className={`w-11 shrink-0 text-right font-mono text-xs tabular-nums ${r.ink}`}>{r.pct}%</span>
             </div>
           );
         })}
       </div>
-      <p className="mt-3 text-xs text-ink-subtle">{t("groups.track.progress.caption", { date })}</p>
+      <p className="mt-3 min-h-[1.45em] text-xs text-ink-subtle">{now ? t("groups.track.progress.caption", { date }) : ""}</p>
     </div>
   );
 }
